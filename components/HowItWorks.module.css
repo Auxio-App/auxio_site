@@ -1,0 +1,11 @@
+.section { background: var(--bege); padding: 96px 40px; }
+.container { max-width: 1120px; margin: 0 auto; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--argila); margin-bottom: 12px; }
+.title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: clamp(28px,3.5vw,40px); letter-spacing: -1px; color: var(--castanho); margin-bottom: 64px; line-height: 1.15; }
+.steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; position: relative; }
+.steps::before { content: ''; position: absolute; top: 27px; left: 12%; right: 12%; height: 1px; background: linear-gradient(90deg, var(--argila) 0%, var(--oliva) 100%); opacity: 0.2; pointer-events: none; }
+.step { text-align: center; padding: 0 8px; }
+.num { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 2px solid rgba(196,112,79,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 18px; color: var(--argila); box-shadow: 0 4px 16px rgba(196,112,79,0.1); position: relative; z-index: 1; }
+.stepTitle { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--castanho); margin-bottom: 8px; }
+.stepDesc { font-size: 13px; color: var(--castanho-medio); line-height: 1.6; opacity: 0.7; }
+@media (max-width: 900px) { .section { padding: 64px 24px; } .steps { grid-template-columns: repeat(2,1fr); } .steps::before { display: none; } }

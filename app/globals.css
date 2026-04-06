@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --argila: #6F8B57; 
+  /* #C4704F; */
+  --argila-dark: #4A6338;
+  /* #A85D42; */
+  --oliva: #B87333;
+  /* #6B7A3A; */
+  --castanho: #1E140E;
+  --castanho-medio: #5C3820;
+  --bege: #FBF7F4;
+  --bege-mid: #F3EDE7;
+  --white: #FFFFFF;
+  --shadow-sm: 0 1px 3px rgba(30,20,14,0.06);
+  --shadow-md: 0 4px 16px rgba(30,20,14,0.08);
+  --shadow-lg: 0 8px 32px rgba(30,20,14,0.10);
+  --shadow-xl: 0 24px 64px rgba(30,20,14,0.12);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bege);
+  color: var(--castanho);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

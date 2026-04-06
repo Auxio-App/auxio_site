@@ -1,0 +1,4 @@
+.footer { background: var(--castanho); padding: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 20px; color: var(--argila); }
+.text { font-size: 13px; color: rgba(255,255,255,0.3); }
+@media (max-width: 768px) { .footer { flex-direction: column; text-align: center; } }

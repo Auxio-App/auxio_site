@@ -1,0 +1,18 @@
+.section { background: var(--bege); padding: 96px 40px; }
+.container { max-width: 1120px; margin: 0 auto; text-align: center; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--argila); margin-bottom: 12px; }
+.title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: clamp(28px,3.5vw,40px); letter-spacing: -1px; color: var(--castanho); margin-bottom: 16px; line-height: 1.15; }
+.desc { font-size: 16px; color: var(--castanho-medio); line-height: 1.65; max-width: 520px; margin: 0 auto 56px; }
+.card { max-width: 480px; margin: 0 auto; background: var(--white); border-radius: var(--radius-xl); padding: 48px; box-shadow: 0 16px 48px rgba(30,20,14,0.08); text-align: center; position: relative; overflow: hidden; }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--argila) 0%, var(--argila-dark) 100%); }
+.plan { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--argila); margin-bottom: 12px; }
+.price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 64px; color: var(--castanho); letter-spacing: -3px; line-height: 1; margin-bottom: 4px; }
+.price sup { font-size: 28px; letter-spacing: 0; vertical-align: super; margin-right: 2px; }
+.period { font-size: 14px; color: var(--castanho-medio); opacity: 0.6; margin-bottom: 36px; }
+.features { list-style: none; text-align: left; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+.features li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--castanho-medio); }
+.check { width: 20px; height: 20px; background: rgba(196,112,79,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--argila); font-size: 11px; font-weight: 700; }
+.btn { display: block; background: var(--argila); color: var(--white); padding: 18px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+.btn:hover { background: var(--argila-dark); transform: translateY(-2px); }
+.note { font-size: 13px; color: var(--castanho-medio); opacity: 0.5; margin-top: 16px; }
+@media (max-width: 900px) { .section { padding: 64px 24px; } .card { padding: 32px 24px; } }
