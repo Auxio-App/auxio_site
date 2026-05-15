@@ -22,7 +22,7 @@ export default function Navbar() {
         Auxio
       </Link>
       <ul className={s.links}>
-        <li><Link href="#features">Funcionalidades</Link></li>
+        <li><Link href="#agenda">Funcionalidades</Link></li>
         <li><Link href="#como-funciona">Como funciona</Link></li>
         <li><Link href="#precos">Preços</Link></li>
         <li><Link href="#lista-espera" className={s.cta}>Subscrever</Link></li>

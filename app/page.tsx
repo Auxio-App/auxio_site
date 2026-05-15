@@ -1,6 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
+import PainSection  from '@/components/PainSection';
+import AgendaSection from '@/components/AgendaSection';
+import CRMSection from '@/components/CRMSection';
+import FinanceSection from '@/components/FinanceSection';
 import HowItWorks from '@/components/HowItWorks';
 import Pillars from '@/components/Pillars';
 import Personas from '@/components/Personas';
@@ -13,7 +16,10 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Features />
+      <PainSection />
+      <AgendaSection />
+      <CRMSection />
+      <FinanceSection />
       <HowItWorks />
       <Pillars />
       <Personas />

@@ -3,8 +3,8 @@ import s from './HowItWorks.module.css';
 
 const steps = [
   { num: '1', title: 'Crias a tua conta', desc: 'Registo em 3 passos. Defines os teus serviços, horários e preços.' },
-  { num: '2', title: 'Adicionas os clientes', desc: 'Adicionas os teus clientes manualmente em minutos. Nome, contacto, notas e preferências — tudo num só sítio.' },
-  { num: '3', title: 'O Auxio trata do resto', desc: 'Confirmações, lembretes, recibos e alertas — tudo automático, no WhatsApp.' },
+  { num: '2', title: 'Adicionas os clientes', desc: 'Adicionas os teus clientes.' },
+  { num: '3', title: 'O Auxio trata do resto', desc: 'Confirmações, lembretes, recibos e alertas, tudo automático.' },
   { num: '4', title: 'Recuperas o teu tempo', desc: '6 horas por semana de volta. Focas-te nos clientes, não na gestão.' },
 ];
 

@@ -1,0 +1,157 @@
+.section {
+    background: var(--white);
+    padding: 50px 24px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--argila);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  letter-spacing: -1px;
+  color: var(--castanho);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.desc {
+  font-size: 16px;
+  color: var(--castanho-medio);
+  line-height: 1.65;
+  white-space: nowrap;
+  margin-bottom: 17px;
+}
+
+.descBold {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--castanho);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2px;
+}
+
+.item {
+    display: flex;
+    gap: 24px;
+    padding: 36px 32px 36px 0;
+    border-top: 1px solid var(--bege-mid);
+    align-items: flex-start;
+}
+
+.item:nth-child(even) {
+    padding-left: 32px;
+    padding-right: 0;
+    border-left: 1px solid var(--bege-mid);
+}
+
+.item:nth-child(3),
+.item:nth-child(4) {
+    border-bottom: 1px solid var(--bege-mid);
+}
+
+.num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--argila);
+    min-width: 32px;
+    padding-top: 2px;
+}
+
+.itemBody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.itemTitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--castanho);
+    line-height: 1.35;
+}
+
+.itemText {
+    font-size: 15px;
+    color: var(--castanho-medio);
+    line-height: 1.65;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta {
+    display: inline-block;
+    background: var(--argila);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.cta:hover {
+    background: var(--argila-dark);
+    transform: translateY(-1px);
+}
+
+.note {
+    font-size: 12px;
+    color: var(--castanho-medio);
+    opacity: 0.65;
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 64px 20px;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+    }
+
+    .item:nth-child(even) {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .item:nth-child(3),
+    .item:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .item:last-child {
+        border-bottom: 1px solid var(--bege-mid);
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}

@@ -1,6 +1,9 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import s from './Hero.module.css';
+
+const WEEKDAYS = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+const MONTHS   = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 
 const appointments = [
   { name: 'Ana Ferreira', type: 'Fisioterapia', time: '10:00', badge: 'confirmed', badgeLabel: 'Confirmada ✓', color: 'var(--argila)', active: true },
@@ -11,6 +14,13 @@ const appointments = [
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
+
+  const { dayLabel, dateLabel } = useMemo(() => {
+    const now = new Date();
+    const dayLabel = `Hoje · ${WEEKDAYS[now.getDay()]}`;
+    const dateLabel = `${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
+    return { dayLabel, dateLabel };
+  }, []);
   useEffect(() => {
     const els = ref.current?.querySelectorAll('.fade-up');
     const obs = new IntersectionObserver(
@@ -39,7 +49,7 @@ export default function Hero() {
             Subscrever
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#features" className={s.btnGhost}>Ver o que faz</a>
+          <a href="#agenda" className={s.btnGhost}>Ver o que faz</a>
         </div>
         <div className={`${s.proof} fade-up`} style={{ transitionDelay: '0.4s' }}>
           {/* <div className={s.avatars}>
@@ -55,8 +65,8 @@ export default function Hero() {
         <div className={s.card}>
           <div className={s.cardHeader}>
             <div>
-              <div className={s.cardLabel}>Hoje · Terça</div>
-              <div className={s.cardDate}>25 Mar 2025</div>
+              <div className={s.cardLabel}>{dayLabel}</div>
+              <div className={s.cardDate}>{dateLabel}</div>
             </div>
             <span className={s.cardCount}>4 marcações</span>
           </div>
