@@ -41,11 +41,11 @@ export default function Hero() {
           O teu negócio,<br /><em>finalmente</em><br />sob controlo.
         </h1>
         <p className={`${s.sub} fade-up`} style={{ transitionDelay: '0.2s' }}>
-          Agenda, clientes, finanças e comunicação — tudo num só lugar. 
+          Agenda, clientes, finanças e comunicação - tudo num só lugar. 
           O Auxio elimina o trabalho manual para que se possa focar nos seus clientes.
         </p>
         <div className={`${s.actions} fade-up`} style={{ transitionDelay: '0.3s' }}>
-          <a href="#lista-espera" className={s.btnPrimary}>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
             Subscrever
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>

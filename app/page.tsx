@@ -23,8 +23,7 @@ export default function Home() {
       <HowItWorks />
       <Pillars />
       <Personas />
-      <Pricing />
-      <CtaSection />
+      <Pricing />      
       <Footer />
     </>
   );

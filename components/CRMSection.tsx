@@ -23,7 +23,7 @@ export default function CRMSection() {
                     <div className={s.imageCol}>
                         <FadeSection>
                             <Image
-                                src="/auxio_clientes_desktop.svg.png"
+                                src="/auxio_clientes_desktop.png"
                                 alt="Painel de clientes Auxio"
                                 width={600}
                                 height={400}

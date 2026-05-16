@@ -77,7 +77,7 @@ export default function Pricing() {
                     <li key={j}><span className={s.check}>✓</span>{f}</li>
                   ))}
                 </ul>
-                {plan.cta && <a href="#lista-espera" className={`${s.btn} ${plan.featured ? s.btnFeatured : ''}`}>Subscrever</a>}
+                {plan.cta && <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className={`${s.btn} ${plan.featured ? s.btnFeatured : ''}`}>Subscrever</a>}
               </div>
             </FadeSection>
           ))}
