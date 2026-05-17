@@ -38,7 +38,7 @@ export default function Hero() {
           <span className={s.dot} /> MVP em desenvolvimento · Portugal
         </div>
         <h1 className={`${s.h1} fade-up`} style={{ transitionDelay: '0.1s' }}>
-          O teu negócio,<br /><em>finalmente</em><br />sob controlo.
+          O teu negócio,<br /><em>finalmente</em><br />sob controlo
         </h1>
         <p className={`${s.sub} fade-up`} style={{ transitionDelay: '0.2s' }}>
           Agenda, clientes, finanças e comunicação - tudo num só lugar. 
