@@ -86,4 +86,5 @@
   .section { padding: 64px 24px; }
   .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   .cardFeatured { transform: none; }
+  .featuredWrapper { order: -1; }
 }

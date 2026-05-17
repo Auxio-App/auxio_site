@@ -25,7 +25,7 @@ export default function Navbar() {
         <li><Link href="#agenda">Funcionalidades</Link></li>
         <li><Link href="#como-funciona">Como funciona</Link></li>
         <li><Link href="#precos">Preços</Link></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className={s.cta}>Subscrever</a></li>
+        <li className={s.ctaItem}><a href="https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className={s.cta}>Subscrever</a></li>
       </ul>
     </nav>
   );

@@ -66,7 +66,7 @@ export default function Pricing() {
         <FadeSection delay={0.2}><p className={s.desc}>Sem custos de instalação, sem contratos anuais obrigatórios, sem letras pequenas.</p></FadeSection>
         <div className={s.grid}>
           {plans.map((plan, i) => (
-            <FadeSection key={i} delay={i * 0.1 + 0.2}>
+            <FadeSection key={i} delay={i * 0.1 + 0.2} className={plan.featured ? s.featuredWrapper : ''}>
               <div className={`${s.card} ${plan.featured ? s.cardFeatured : ''}`}>
                 {/* {plan.badge && <div className={s.badge}>{plan.badge}</div>} */}
                 <div className={s.plan}>{plan.subtitle}</div>

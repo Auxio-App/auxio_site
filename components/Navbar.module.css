@@ -64,5 +64,6 @@
 }
 @media (max-width: 768px) {
   .nav { padding: 0 20px; }
-  .links { display: none; }
+  .links li { display: none; }
+  .links .ctaItem { display: block; }
 }
