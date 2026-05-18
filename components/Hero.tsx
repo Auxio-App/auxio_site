@@ -42,7 +42,7 @@ export default function Hero() {
         </h1>
         <p className={`${s.sub} fade-up`} style={{ transitionDelay: '0.2s' }}>
           Agenda, clientes, finanças e comunicação - tudo num só lugar. 
-          O Auxio elimina o trabalho manual para que se possa focar nos seus clientes.
+          O Auxio elimina o trabalho manual para que te possas focar nos teus clientes.
         </p>
         <div className={`${s.actions} fade-up`} style={{ transitionDelay: '0.3s' }}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>

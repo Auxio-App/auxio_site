@@ -21,13 +21,13 @@ export default function AgendaSection() {
                     <p className={s.desc}>
                         O sistema envia confirmações automáticas 24 horas antes via WhatsApp, 
                         analisando autonomamento respostas SIM/NÃO. Sempre que ocorre um cancelamento, 
-                        é notificado de imediato para poder gerir a vaga de forma eficiente.</p>
+                        és notificado de imediato para poderes gerir a vaga de forma eficiente.</p>
                 </FadeSection>
 
 
                 <div className={s.split}>
                     <FadeSection delay={0.1} className={s.left}>
-                        <h3 className={s.leftTitle}>Diga adeus às marcações perdidas</h3>                        
+                        <h3 className={s.leftTitle}>Diz adeus às marcações perdidas</h3>                        
                         <ul className={s.list}>
                         {items.map((item, i) => (
                             <li key={i}>

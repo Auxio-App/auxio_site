@@ -43,11 +43,11 @@ export default function CRMSection() {
                             <p className={s.desc}>
                                 Histórico completo de cada cliente, num só lugar.
                                 Notas, documentos, preferências e interações sempre acessíveis.
-                                Chegue a cada marcação com contexto, preparado e com controlo total.
+                                Chega a cada marcação com contexto, preparado e com controlo total.
                             </p>
                         </FadeSection>
                         <FadeSection delay={0.3}>
-                            <h3 className={s.leftTitle}>Conheça cada cliente em profundidade</h3>
+                            <h3 className={s.leftTitle}>Conhece cada cliente em profundidade</h3>
                             <ul className={s.list}>
                                 {items.map((item, i) => (
                                     <li key={i}>
