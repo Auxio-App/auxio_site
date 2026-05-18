@@ -12,7 +12,7 @@ export default function Personas() {
             <div className={s.card}>
               <div className={s.header}>
                 <div className={s.avatar} style={{ background: 'var(--argila)' }}>AF</div>
-                <div><div className={s.name}>Andreia, 48 anos — Fisioterapeuta</div><div className={s.role}>Trabalhador independente</div></div>
+                <div><div className={s.name}>Andreia, 48 anos - Fisioterapeuta</div><div className={s.role}>Trabalhador independente</div></div>
               </div>
               <div className={s.pain}>&ldquo;Perco 1 hora por dia a confirmar marcações pelo WhatsApp.&rdquo;</div>
               <div className={s.hook}>→ Recupera 5 horas por semana ainda este mês.</div>
@@ -22,7 +22,7 @@ export default function Personas() {
             <div className={s.card}>
               <div className={s.header}>
                 <div className={s.avatar} style={{ background: 'var(--oliva)' }}>SL</div>
-                <div><div className={s.name}>Sofia, 29 anos — Esteticista</div><div className={s.role}>Trabalhador independente · Espaço partilhado</div></div>
+                <div><div className={s.name}>Sofia, 29 anos - Esteticista</div><div className={s.role}>Trabalhador independente · Espaço partilhado</div></div>
               </div>
               <div className={s.pain}>&ldquo;Não sei quanto ganhei este mês até fazer as contas no fim.&rdquo;</div>
               <div className={s.hook}>→ O Auxio faz as contas por ti, em tempo real.</div>
