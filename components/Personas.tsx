@@ -31,7 +31,7 @@ export default function Personas() {
         </div>
         <FadeSection delay={0.3}>
           <div className={s.also}>
-            <p>O Auxio serve também <strong>psicólogos, nutricionistas, osteopatas, personal trainers, coaches, advogados, contabilistas e fotógrafos</strong> — todos os profissionais de serviços que dependem de marcações.</p>
+            <p>O Auxio serve também <strong>psicólogos, nutricionistas, osteopatas, personal trainers, coaches, advogados, contabilistas e fotógrafos</strong> - todos os profissionais de serviços que dependem de marcações.</p>
           </div>
         </FadeSection>
       </div>
