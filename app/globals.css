@@ -32,6 +32,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* compensa a navbar fixa nos saltos de âncora */
+section[id] { scroll-margin-top: 72px; }
+
+::selection { background: rgba(111,139,87,0.25); }
+
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bege);
@@ -48,5 +53,10 @@ body {
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { opacity: 1; transform: none; transition: none; }
 }
 

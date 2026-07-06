@@ -1,5 +1,32 @@
-.section { background: var(--argila); padding: 96px 40px; text-align: center; }
-.container { max-width: 1120px; margin: 0 auto; }
+.section { background: var(--argila); padding: 96px 40px; text-align: center; position: relative; overflow: hidden; }
+.container { max-width: 1120px; margin: 0 auto; position: relative; }
+
+/* blobs suaves no fundo, como no hero */
+.blobA, .blobB {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.blobA {
+  width: 420px; height: 420px;
+  top: -160px; right: -100px;
+  background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, transparent 70%);
+  animation: ctaDrift 16s ease-in-out infinite;
+}
+.blobB {
+  width: 380px; height: 380px;
+  bottom: -140px; left: -120px;
+  background: radial-gradient(circle, rgba(30,20,14,0.18) 0%, transparent 70%);
+  animation: ctaDrift 20s ease-in-out infinite reverse;
+}
+@keyframes ctaDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-26px, 20px) scale(1.05); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blobA, .blobB { animation: none; }
+}
 .label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
 .title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(32px,4vw,52px); color: var(--white); letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
 .title em { font-style: italic; opacity: 0.75; }

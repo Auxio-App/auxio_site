@@ -46,9 +46,15 @@
     pointer-events: none; 
 }
 
-.step { 
-    text-align: center; 
-    padding: 0 8px; 
+.step {
+    text-align: center;
+    padding: 0 8px;
+}
+
+.step:hover .num {
+    background: var(--argila);
+    color: var(--white);
+    transform: scale(1.08);
 }
 
 .num { 
@@ -65,8 +71,9 @@
     font-weight: 800; 
     font-size: 18px; 
     color: var(--argila); 
-    box-shadow: 0 4px 16px rgba(196,112,79,0.1); 
-    position: relative; z-index: 1; 
+    box-shadow: 0 4px 16px rgba(196,112,79,0.1);
+    position: relative; z-index: 1;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .stepTitle { 
