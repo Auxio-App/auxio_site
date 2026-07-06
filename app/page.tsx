@@ -8,7 +8,6 @@ import HowItWorks from '@/components/HowItWorks';
 import Pillars from '@/components/Pillars';
 import Personas from '@/components/Personas';
 import Pricing from '@/components/Pricing';
-import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <Pillars />
       <Personas />
       <Pricing />
-      <CtaSection />
       <Footer />
     </>
   );
