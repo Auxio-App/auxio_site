@@ -1,7 +1,7 @@
 .nav {
-  position: fixed;            /* fixa a navbar no topo da página */
-  top: 0; left: 0; right: 0;  /* ocupa toda a largura do ecrã */
-  z-index: 100;               /* garante que a navbar fique acima de outros elementos */
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
   padding: 0 40px;
   height: 64px;
   display: flex;
@@ -23,8 +23,6 @@
   color: var(--argila);
   letter-spacing: -0.5px;
   text-decoration: none;
-}
-.logo {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -62,8 +60,109 @@
   background: var(--argila) !important;
   transform: translateY(-1px);
 }
+
+/* ---------- Toggle de idioma ---------- */
+.langToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: rgba(30,20,14,0.05);
+  border-radius: var(--radius-pill);
+}
+.langBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--castanho-medio);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.langBtn:hover { color: var(--castanho); }
+.langBtnActive {
+  background: var(--white);
+  color: var(--castanho);
+  box-shadow: 0 1px 4px rgba(30,20,14,0.12);
+}
+.langToggleMobile {
+  align-self: flex-start;
+  margin: 12px 4px 4px;
+}
+
+/* ---------- Hamburger ---------- */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.burgerLine {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--castanho);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.burgerTopOpen { transform: translateY(7px) rotate(45deg); }
+.burgerMidOpen { opacity: 0; }
+.burgerBotOpen { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Menu mobile ---------- */
+.mobileMenu {
+  position: absolute;
+  top: 64px; left: 0; right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 20px 20px;
+  background: var(--bege);
+  border-bottom: 1px solid rgba(30,20,14,0.08);
+  box-shadow: 0 16px 32px rgba(30,20,14,0.10);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.mobileMenu a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--castanho);
+  text-decoration: none;
+  padding: 12px 4px;
+  border-bottom: 1px solid rgba(30,20,14,0.06);
+}
+.mobileMenu a:last-of-type { border-bottom: none; }
+.mobileCta {
+  margin-top: 8px;
+  background: var(--argila);
+  color: var(--white) !important;
+  text-align: center;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  padding: 14px !important;
+  border-bottom: none !important;
+}
+.mobileMenuOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 @media (max-width: 768px) {
   .nav { padding: 0 20px; }
-  .links li { display: none; }
-  .links .ctaItem { display: block; }
+  .links { display: none; }
+  .burger { display: flex; }
+  .mobileMenu { display: flex; }
 }

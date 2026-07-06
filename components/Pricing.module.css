@@ -21,6 +21,12 @@
   text-align: left;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(30,20,14,0.12);
 }
 
 .card::before {
@@ -35,6 +41,11 @@
   background: var(--castanho);
   box-shadow: 0 20px 60px rgba(30,20,14,0.22);
   transform: translateY(-8px);
+}
+
+.cardFeatured:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 28px 72px rgba(30,20,14,0.28);
 }
 
 .cardFeatured::before {

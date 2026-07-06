@@ -1,6 +1,6 @@
 .section {
     background: var(--white);
-    padding: 50px 24px;
+    padding: 96px 24px;
 }
 
 .container {
@@ -54,6 +54,16 @@
     padding: 36px 32px 36px 0;
     border-top: 1px solid var(--bege-mid);
     align-items: flex-start;
+    transition: background 0.25s ease;
+}
+
+.item:hover {
+    background: var(--bege);
+}
+
+.item:hover .num {
+    transform: translateY(-2px);
+    color: var(--argila-dark);
 }
 
 .item:nth-child(even) {
@@ -74,6 +84,7 @@
     color: var(--argila);
     min-width: 32px;
     padding-top: 2px;
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .itemBody {

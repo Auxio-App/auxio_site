@@ -26,6 +26,17 @@
     height: auto;
     border-radius: 0 16px 16px 0;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+}
+
+.mockup:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mockup { transition: none; }
+    .mockup:hover { transform: none; }
 }
 
 /* Coluna direita: texto */
