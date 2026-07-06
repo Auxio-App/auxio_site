@@ -14,7 +14,7 @@ const copy = {
     sub: 'Agenda que confirma marcações sozinha, finanças em tempo real e o histórico de cada cliente num só lugar. Sem folhas de cálculo, sem mensagens perdidas.',
     ctaPrimary: 'Quero acesso antecipado',
     ctaGhost: 'Ver como funciona',
-    note: 'Os primeiros 15 profissionais garantem desconto nos primeiros 3 meses.',
+    
     today: 'Hoje',
     count: '4 marcações',
     appointments: [
@@ -120,9 +120,7 @@ export default function Hero() {
             </a>
             <a href="#agenda" className={s.btnGhost}>{t.ctaGhost}</a>
           </div>
-          <p className={`${s.note} fade-up`} style={{ transitionDelay: '0.3s' }}>
-            {t.note}
-          </p>
+          
         </div>
 
         <div className={`${s.right} fade-up`} style={{ transitionDelay: '0.18s' }}>
