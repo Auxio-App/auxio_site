@@ -7,11 +7,11 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54Yji
 
 const copy = {
   pt: {
-    badge: 'Early access aberto · Feito em Portugal',
+    badge: 'Early access aberto',
     h1a: 'Tu tratas dos clientes.',
     h1b: 'O Auxio trata ',
     h1mark: 'do resto',
-    sub: 'Agenda que confirma marcações sozinha, finanças em tempo real e o histórico de cada cliente num só lugar. Sem folhas de cálculo, sem mensagens perdidas.',
+    sub: 'Agenda com lembretes prontos a enviar, finanças em tempo real e o histórico de cada cliente num só lugar. Sem folhas de cálculo, sem mensagens perdidas.',
     ctaPrimary: 'Quero acesso antecipado',
     ctaGhost: 'Ver como funciona',
     
@@ -42,7 +42,7 @@ const copy = {
     h1a: 'You take care of clients.',
     h1b: 'Auxio handles ',
     h1mark: 'the rest',
-    sub: 'A calendar that confirms appointments on its own, real-time finances and every client’s history in one place. No spreadsheets, no lost messages.',
+    sub: 'A calendar with reminders ready to send, real-time finances and every client’s history in one place. No spreadsheets, no lost messages.',
     ctaPrimary: 'Get early access',
     ctaGhost: 'See how it works',
     note: 'The first 15 professionals get a discount for the first 3 months.',

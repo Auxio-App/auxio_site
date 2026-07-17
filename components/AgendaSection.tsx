@@ -7,11 +7,11 @@ import s from "./AgendaSection.module.css";
 const copy = {
     pt: {
         label: 'Agenda',
-        title: <>Agenda Inteligente que confirma<br />marcações automaticamente</>,
-        desc: 'O sistema envia confirmações 24 horas antes via WhatsApp e interpreta as respostas SIM/NÃO sem intervenção tua. Sempre que ocorre um cancelamento, és notificado de imediato para poderes preencher a vaga.',
+        title: <>Agenda inteligente com lembretes<br />prontos a enviar</>,
+        desc: 'Personalizas o lembrete de cada cliente e envia-lo pelo WhatsApp com um toque: a mensagem abre já escrita, é só carregar em enviar. Sempre que ocorre um cancelamento, és notificado de imediato para poderes preencher a vaga.',
         leftTitle: 'Diz adeus às marcações perdidas',
         items: [
-            'Confirmação automática via WhatsApp com resposta SIM/NÃO',
+            'Lembretes por WhatsApp com um toque — mensagem já escrita',
             'Reorganização rápida com funcionalidade drag & drop',
             'Bloqueios recorrentes para almoço, folgas e formações',
             'Relatório mensal de faltas com cálculo de receita perdida',
@@ -36,16 +36,16 @@ const copy = {
             { time: '12:00', name: 'Tiago Lopes',    sub: 'Consulta Geral · 12:00 – 13:00',status: 'Confirmada', color: 'green' },
         ],
         nav: ['Finanças', 'Agenda', 'Serviços', 'Clientes', 'Perfil'],
-        chipTitle: 'Lembrete enviado à Carla',
-        chipSub: 'WhatsApp · 24h antes da sessão',
+        chipTitle: 'Lembretes por enviar',
+        chipSub: 'WhatsApp · toque para enviar',
     },
     en: {
         label: 'Calendar',
-        title: <>A Smart Calendar that confirms<br />appointments automatically</>,
-        desc: 'The system sends confirmations 24 hours ahead via WhatsApp and interprets YES/NO replies without you lifting a finger. Whenever a cancellation happens, you are notified immediately so you can fill the slot.',
+        title: <>A smart calendar with reminders<br />ready to send</>,
+        desc: 'You personalise each client’s reminder and send it over WhatsApp in one tap: the message opens ready-written, you just hit send. Whenever a cancellation happens, you are notified immediately so you can fill the slot.',
         leftTitle: 'Say goodbye to lost appointments',
         items: [
-            'Automatic WhatsApp confirmation with YES/NO replies',
+            'One-tap WhatsApp reminders — message ready-written',
             'Quick reorganisation with drag & drop',
             'Recurring blocks for lunch, days off and training',
             'Monthly no-show report with lost revenue estimate',
@@ -71,7 +71,7 @@ const copy = {
         ],
         nav: ['Finances', 'Calendar', 'Services', 'Clients', 'Profile'],
         chipTitle: 'Reminder sent to Carla',
-        chipSub: 'WhatsApp · 24h before the session',
+        chipSub: 'WhatsApp · tap to send',
     },
 };
 

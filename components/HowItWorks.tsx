@@ -11,7 +11,7 @@ const copy = {
     steps: [
       { num: '1', title: 'Crias a tua conta', desc: 'Registo em 3 passos. Defines os teus serviços, horários e preços.' },
       { num: '2', title: 'Adicionas os clientes', desc: 'Crias a ficha de cada cliente em segundos — nome e contacto chegam para começar.' },
-      { num: '3', title: 'O Auxio trata do resto', desc: 'Confirmações, lembretes, recibos e alertas, tudo automático.' },
+      { num: '3', title: 'O Auxio trata do resto', desc: 'Lembretes prontos a enviar, recibos e alertas de pagamento — o Auxio prepara tudo por ti.' },
       { num: '4', title: 'Recuperas o teu tempo', desc: '5 horas por semana de volta. Focas-te nos clientes, não na gestão.' },
     ],
   },
@@ -21,7 +21,7 @@ const copy = {
     steps: [
       { num: '1', title: 'Create your account', desc: 'Sign up in 3 steps. Set your services, hours and prices.' },
       { num: '2', title: 'Add your clients', desc: 'Create each client’s profile in seconds — a name and contact are enough to start.' },
-      { num: '3', title: 'Auxio handles the rest', desc: 'Confirmations, reminders, receipts and alerts, all automatic.' },
+      { num: '3', title: 'Auxio handles the rest', desc: 'Reminders ready to send, receipts and payment alerts — Auxio prepares it all for you.' },
       { num: '4', title: 'Get your time back', desc: '5 hours a week returned. You focus on clients, not admin.' },
     ],
   },

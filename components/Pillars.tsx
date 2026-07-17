@@ -12,7 +12,7 @@ const copy = {
     pillars: [
       { emoji: '🤝', title: 'Confiança', desc: 'Os dados dos teus clientes são tratados com máxima responsabilidade. Dados sempre na Europa, RGPD desde o primeiro dia.' },
       { emoji: '✨', title: 'Simplicidade', desc: 'O profissional já tem a vida complicada. Menos cliques, menos dúvidas, mais tempo. Sem formação técnica necessária.' },
-      { emoji: '🧠', title: 'Inteligência', desc: 'O Auxio automatiza o trabalho repetitivo: lembretes, recibos, alertas de pagamento, para que não tenhas de pensar nisso.' },
+      { emoji: '🧠', title: 'Inteligência', desc: 'O Auxio prepara o trabalho repetitivo por ti: lembretes prontos a enviar, recibos e alertas de pagamento, para que não tenhas de pensar nisso.' },
       { emoji: '🚀', title: 'Autonomia', desc: 'Exportação de dados fácil, sem lock-in, configuração flexível. O produto serve-te, não o contrário.' },
     ],
   },
@@ -23,7 +23,7 @@ const copy = {
     pillars: [
       { emoji: '🤝', title: 'Trust', desc: 'Your clients’ data is handled with the utmost responsibility. Data always in Europe, GDPR from day one.' },
       { emoji: '✨', title: 'Simplicity', desc: 'Your life is complicated enough. Fewer clicks, fewer doubts, more time. No technical training required.' },
-      { emoji: '🧠', title: 'Intelligence', desc: 'Auxio automates the repetitive work: reminders, receipts, payment alerts, so you never have to think about it.' },
+      { emoji: '🧠', title: 'Intelligence', desc: 'Auxio prepares the repetitive work for you: reminders ready to send, receipts and payment alerts, so you never have to think about it.' },
       { emoji: '🚀', title: 'Autonomy', desc: 'Easy data export, no lock-in, flexible configuration. The product serves you, not the other way around.' },
     ],
   },
