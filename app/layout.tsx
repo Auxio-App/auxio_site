@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Auxio - O co-piloto do profissional moderno',
   description: 'Agenda, clientes, financeiro e comunicação - tudo num só lugar. O Auxio elimina o trabalho manual para que te possas focar nos teus clientes.',
   keywords: 'gestão, agenda, profissionais, fisioterapia, psicologia, CRM, faturação, WhatsApp',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'Auxio - O co-piloto do profissional moderno',
     description: 'Recupera 5 horas por semana. Zero faltas. Zero trabalho manual.',
