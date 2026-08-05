@@ -4,74 +4,85 @@ import FadeSection from "./FadeSection";
 import { useLang } from "@/lib/i18n";
 import s from "./AgendaSection.module.css";
 
+const START_HOUR = 9;
+const HOURS = 6;
+
+// posição em meias-horas a contar de START_HOUR — "10:30" → 3
+const half = (t: string) => (+t.slice(0, 2) - START_HOUR) * 2 + (+t.slice(3) >= 30 ? 1 : 0);
+
+const events = [
+    { day: 0, from: '10:00', to: '11:00', tone: 'green' },
+    { day: 0, from: '12:30', to: '13:30', tone: 'blue'  },
+    { day: 1, from: '09:00', to: '10:00', tone: 'amber' },
+    { day: 1, from: '11:30', to: '12:30', tone: 'sand'  },
+    { day: 2, from: '09:30', to: '10:30', tone: 'green' },
+    { day: 2, from: '12:00', to: '13:00', tone: 'blue'  },
+    { day: 3, from: '09:00', to: '10:00', tone: 'green' },
+    { day: 3, from: '11:00', to: '12:00', tone: 'red'   },
+    { day: 3, from: '13:00', to: '14:00', tone: 'sand'  },
+    { day: 4, from: '10:00', to: '11:00', tone: 'green' },
+    { day: 4, from: '12:30', to: '13:30', tone: 'amber' },
+    { day: 5, from: '09:30', to: '10:30', tone: 'blue'  },
+    { day: 5, from: '11:30', to: '12:30', tone: 'sand'  },
+    { day: 6, from: '10:30', to: '11:30', tone: 'green' },
+];
+
 const copy = {
     pt: {
+        kicker: 'Funcionalidades',
+        sectionTitle: 'Quatro áreas. Tudo ligado, sem trabalho a dobrar.',
         label: 'Agenda',
-        title: <>Agenda inteligente com lembretes<br />prontos a enviar</>,
-        desc: 'Personalizas o lembrete de cada cliente e envia-lo pelo WhatsApp com um toque: a mensagem abre já escrita, é só carregar em enviar. Sempre que ocorre um cancelamento, és notificado de imediato para poderes preencher a vaga.',
-        leftTitle: 'Diz adeus às marcações perdidas',
+        title: 'A semana toda de relance, sem sobreposições.',
+        desc: 'Vista de dia, semana e mês. Arrasta para remarcar, define pacotes de sessões e vê quem confirmou. As faltas aparecem no dashboard antes de te custarem dinheiro.',
         items: [
-            'Lembretes por WhatsApp com um toque — mensagem já escrita',
-            'Reorganização rápida com funcionalidade drag & drop',
-            'Bloqueios recorrentes para almoço, folgas e formações',
-            'Relatório mensal de faltas com cálculo de receita perdida',
-            'Vistas diária, semanal e mensal',
+            'Vistas de dia, semana e mês com arrastar para remarcar.',
+            'Confirmações e lembretes automáticos por SMS ou email.',
+            'Pacotes de sessões com contagem automática do que falta.',
         ],
-        appTitle: 'Agenda',
-        newBtn: '+ Nova Marcação',
-        stats: [
-            { label: 'Confirmadas', val: '8', dot: '#6B7A3A' },
-            { label: 'Pendentes',   val: '3', dot: '#C4704F' },
-            { label: 'Canceladas',  val: '1', dot: '#aaa'    },
-            { label: 'Ocupação',    val: '75%', dot: null, green: true },
+        views: ['Dia', 'Semana', 'Mês'],
+        today: 'Hoje',
+        range: '20–26 julho',
+        filters: 'Filtros',
+        days: [
+            { name: 'Seg', num: '20' },
+            { name: 'Ter', num: '21' },
+            { name: 'Qua', num: '22' },
+            { name: 'Qui', num: '23' },
+            { name: 'Sex', num: '24' },
+            { name: 'Sáb', num: '25' },
+            { name: 'Dom', num: '26' },
         ],
-        tabs: ['Dia', 'Semana', 'Mês'],
-        tabBlock: 'Bloquear',
-        dateNav: 'Quarta, 9 Abril 2026',
-        slots: [
-            { time: '08:00', name: 'Ana Silva',      sub: 'Psicologia · 08:00 – 09:00',    status: 'Confirmada', color: 'green' },
-            { time: '09:00', name: 'Carla Nunes',    sub: 'Fisioterapia · 09:00 – 10:00',  status: 'Pendente',   color: 'yellow' },
-            { time: '10:00', name: 'Almoço · Bloqueado', sub: '10:00 – 11:00',             status: null,         color: 'neutral' },
-            { time: '11:00', name: 'Inês Ferreira',  sub: 'Estética · 11:00 – 12:00',      status: 'Cancelada',  color: 'red' },
-            { time: '12:00', name: 'Tiago Lopes',    sub: 'Consulta Geral · 12:00 – 13:00',status: 'Confirmada', color: 'green' },
-        ],
-        nav: ['Finanças', 'Agenda', 'Serviços', 'Clientes', 'Perfil'],
-        chipTitle: 'Lembretes por enviar',
-        chipSub: 'WhatsApp · toque para enviar',
+        names: ['Miguel S.', 'Rita M.', 'Inês C.', 'Pilates', 'Pedro S.', 'Ana S.',
+                'Carlos S.', 'Marta N.', 'Hugo M.', 'Ana S.', 'Carlos S.', 'Duarte P.',
+                'Avaliações', 'Sofia L.'],
     },
     en: {
+        kicker: 'Features',
+        sectionTitle: 'Four areas. All connected, no double work.',
         label: 'Calendar',
-        title: <>A smart calendar with reminders<br />ready to send</>,
-        desc: 'You personalise each client’s reminder and send it over WhatsApp in one tap: the message opens ready-written, you just hit send. Whenever a cancellation happens, you are notified immediately so you can fill the slot.',
-        leftTitle: 'Say goodbye to lost appointments',
+        title: 'Your whole week at a glance, no overlaps.',
+        desc: 'Day, week and month views. Drag to reschedule, define session packs and see who confirmed. No-shows land on the dashboard before they cost you money.',
         items: [
-            'One-tap WhatsApp reminders — message ready-written',
-            'Quick reorganisation with drag & drop',
-            'Recurring blocks for lunch, days off and training',
-            'Monthly no-show report with lost revenue estimate',
-            'Daily, weekly and monthly views',
+            'Day, week and month views with drag to reschedule.',
+            'Automatic confirmations and reminders by SMS or email.',
+            'Session packs that count down what is left on their own.',
         ],
-        appTitle: 'Calendar',
-        newBtn: '+ New Booking',
-        stats: [
-            { label: 'Confirmed', val: '8', dot: '#6B7A3A' },
-            { label: 'Pending',   val: '3', dot: '#C4704F' },
-            { label: 'Cancelled', val: '1', dot: '#aaa'    },
-            { label: 'Occupancy', val: '75%', dot: null, green: true },
+        views: ['Day', 'Week', 'Month'],
+        today: 'Today',
+        range: '20–26 July',
+        filters: 'Filters',
+        days: [
+            { name: 'Mon', num: '20' },
+            { name: 'Tue', num: '21' },
+            { name: 'Wed', num: '22' },
+            { name: 'Thu', num: '23' },
+            { name: 'Fri', num: '24' },
+            { name: 'Sat', num: '25' },
+            { name: 'Sun', num: '26' },
         ],
-        tabs: ['Day', 'Week', 'Month'],
-        tabBlock: 'Block',
-        dateNav: 'Wednesday, 9 April 2026',
-        slots: [
-            { time: '08:00', name: 'Ana Silva',      sub: 'Psychology · 08:00 – 09:00',     status: 'Confirmed', color: 'green' },
-            { time: '09:00', name: 'Carla Nunes',    sub: 'Physiotherapy · 09:00 – 10:00',  status: 'Pending',   color: 'yellow' },
-            { time: '10:00', name: 'Lunch · Blocked', sub: '10:00 – 11:00',                 status: null,        color: 'neutral' },
-            { time: '11:00', name: 'Inês Ferreira',  sub: 'Esthetics · 11:00 – 12:00',      status: 'Cancelled', color: 'red' },
-            { time: '12:00', name: 'Tiago Lopes',    sub: 'General visit · 12:00 – 13:00',  status: 'Confirmed', color: 'green' },
-        ],
-        nav: ['Finances', 'Calendar', 'Services', 'Clients', 'Profile'],
-        chipTitle: 'Reminder sent to Carla',
-        chipSub: 'WhatsApp · tap to send',
+        names: ['Miguel S.', 'Rita M.', 'Inês C.', 'Pilates', 'Pedro S.', 'Ana S.',
+                'Carlos S.', 'Marta N.', 'Hugo M.', 'Ana S.', 'Carlos S.', 'Duarte P.',
+                'Assessments', 'Sofia L.'],
     },
 };
 
@@ -82,134 +93,92 @@ export default function AgendaSection() {
     return (
         <section className={s.section} id="agenda">
             <div className={s.container}>
+                <FadeSection>
+                    <div className={s.kicker}>{t.kicker}</div>
+                    <h2 className={s.sectionTitle}>{t.sectionTitle}</h2>
+                </FadeSection>
+
                 <div className={s.split}>
                     <div className={s.left}>
-                        <FadeSection><div className={s.label}>{t.label}</div></FadeSection>
+                        <FadeSection>
+                            <div className={s.pill}>
+                                <svg viewBox="0 0 16 16" width="13" height="13" fill="none"
+                                     stroke="currentColor" strokeWidth="1.4"
+                                     strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="1.5" y="3" width="13" height="11.5" rx="2" />
+                                    <path d="M4.5 1.5v3M11.5 1.5v3M1.5 7h13" />
+                                </svg>
+                                {t.label}
+                            </div>
+                        </FadeSection>
                         <FadeSection delay={0.1}>
-                            <h2 className={s.title}>{t.title}</h2>
+                            <h3 className={s.title}>{t.title}</h3>
                         </FadeSection>
                         <FadeSection delay={0.2}>
                             <p className={s.desc}>{t.desc}</p>
                         </FadeSection>
                         <FadeSection delay={0.3}>
-                            <h3 className={s.leftTitle}>{t.leftTitle}</h3>
                             <ul className={s.list}>
-                            {t.items.map((item, i) => (
-                                <li key={i}>
-                                <span className={s.check}>✓</span>
-                                {item}
-                                </li>
-                            ))}
+                                {t.items.map((item, i) => (
+                                    <li key={i}>
+                                        <span className={s.check}>✓</span>
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </FadeSection>
                     </div>
 
                     <FadeSection delay={0.25} className={s.right}>
-                        <div className={s.phoneScene}>
-                            <div className={s.phoneWrap}>
-                            <div className={s.phone}>
-                                <div className={s.screen}>
-                                {/* Status bar */}
-                                <div className={s.notchBar}>
-                                    <span className={s.notchTime}>9:41</span>
-                                    <span className={s.island} />
-                                    <div className={s.notchIcons}>
-                                    <svg width="14" height="10" viewBox="0 0 14 10">
-                                        <rect x="0" y="3" width="2" height="7" rx="1" fill="#1E140E" opacity="0.3"/>
-                                        <rect x="3" y="2" width="2" height="8" rx="1" fill="#1E140E" opacity="0.5"/>
-                                        <rect x="6" y="0" width="2" height="10" rx="1" fill="#1E140E" opacity="0.7"/>
-                                        <rect x="9" y="0" width="2" height="10" rx="1" fill="#1E140E"/>
-                                    </svg>
-                                    <div className={s.battery} />
-                                    </div>
-                                </div>
-
-                                {/* App header */}
-                                <div className={s.appHeader}>
-                                    <div className={s.appTitleRow}>
-                                    <span className={s.appTitle}>{t.appTitle}</span>
-                                    <span className={s.newBtn}>{t.newBtn}</span>
-                                    </div>
-
-                                    <div className={s.statsRow}>
-                                    {t.stats.map((s2, i) => (
-                                        <div key={i} className={s.statPill}>
-                                        <span className={s.statLabel}>{s2.label}</span>
-                                        <span className={s.statVal} style={s2.green ? { color: '#6B7A3A' } : {}}>
-                                            {s2.dot && <span className={s.statDot} style={{ background: s2.dot }} />}
-                                            {s2.val}
-                                        </span>
-                                        </div>
-                                    ))}
-                                    </div>
-
-                                    <div className={s.tabsRow}>
-                                    {t.tabs.map((tab, i) => (
-                                        <span key={i} className={`${s.tab} ${i === 0 ? s.tabActive : s.tabInactive}`}>{tab}</span>
-                                    ))}
-                                    <span className={s.tabBlock}>{t.tabBlock}</span>
-                                    </div>
-
-                                    <div className={s.dateNav}>
-                                    <span className={s.dateNavArr}>‹</span>
-                                    <span className={s.dateNavText}>{t.dateNav}</span>
-                                    <span className={s.dateNavArr}>›</span>
-                                    </div>
-                                </div>
-
-                                {/* Slots */}
-                                <div className={s.slots}>
-                                    {t.slots.map((a, i) => (
-                                    <div key={i} className={`${s.slot} ${s[`slot_${a.color}`]}`}>
-                                        <span className={s.slotTime}>{a.time}</span>
-                                        <div className={`${s.slotBar} ${s[`bar_${a.color}`]}`} />
-                                        <div className={s.slotBody}>
-                                        <span className={s.slotName} style={a.color === 'neutral' ? { color: '#5C3820' } : {}}>{a.name}</span>
-                                        <span className={s.slotSub}>{a.sub}</span>
-                                        {a.status && (
-                                            <span className={`${s.badgeSm} ${s[`badge_${a.color}`]}`}>{a.status}</span>
-                                        )}
-                                        </div>
-                                    </div>
+                        <div className={s.calCard}>
+                            <div className={s.calBar}>
+                                <div className={s.segmented}>
+                                    {t.views.map((v, i) => (
+                                        <span key={v} className={`${s.seg} ${i === 1 ? s.segActive : ''}`}>{v}</span>
                                     ))}
                                 </div>
+                                <span className={s.navBtn}>‹</span>
+                                <span className={s.navBtn}>{t.today}</span>
+                                <span className={s.navBtn}>›</span>
+                                <span className={s.range}>{t.range}</span>
+                                <span className={s.filters}>{t.filters}</span>
+                            </div>
 
-                                {/* Bottom nav */}
-                                <div className={s.bottomNav}>
-                                    {t.nav.map((label, i) => {
-                                    const active = i === 1;
-                                    return (
-                                    <div key={i} className={s.navItem}>
-                                        <div className={`${s.navIcon} ${active ? s.navIconActive : ''}`}>
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            {i === 0 && <><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#5C3820" opacity="0.5"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="#5C3820" opacity="0.5"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="#5C3820" opacity="0.5"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="#5C3820" opacity="0.5"/></>}
-                                            {i === 1 && <><rect x="1" y="3" width="14" height="11" rx="2" stroke={active ? '#6B7A3A' : '#5C3820'} strokeWidth="1.5" strokeOpacity={active ? 1 : 0.5}/><path d="M4 1v3M12 1v3" stroke={active ? '#6B7A3A' : '#5C3820'} strokeWidth="1.5" strokeLinecap="round" strokeOpacity={active ? 1 : 0.5}/><path d="M1 7h14" stroke={active ? '#6B7A3A' : '#5C3820'} strokeWidth="1.2" strokeOpacity={active ? 1 : 0.5}/></>}
-                                            {i === 2 && <><path d="M2 14V6l6-4 6 4v8H2z" stroke="#5C3820" strokeWidth="1.4" strokeOpacity="0.5" strokeLinejoin="round"/><rect x="5.5" y="8" width="5" height="6" rx="1" fill="#5C3820" fillOpacity="0.2"/></>}
-                                            {i === 3 && <><circle cx="8" cy="5.5" r="3" stroke="#5C3820" strokeWidth="1.4" strokeOpacity="0.5"/><path d="M2 14c0-3.314 2.686-5 6-5s6 1.686 6 5" stroke="#5C3820" strokeWidth="1.4" strokeOpacity="0.5" strokeLinecap="round"/></>}
-                                            {i === 4 && <><circle cx="8" cy="8" r="6" stroke="#5C3820" strokeWidth="1.4" strokeOpacity="0.5"/><path d="M8 5v3l2 1.5" stroke="#5C3820" strokeWidth="1.4" strokeLinecap="round" strokeOpacity="0.5"/></>}
-                                        </svg>
-                                        </div>
-                                        <span className={`${s.navLabel} ${active ? s.navLabelActive : ''}`}>{label}</span>
+                            <div className={s.calHead}>
+                                <span />
+                                {t.days.map((d) => (
+                                    <div key={d.num} className={s.dayHead}>
+                                        <span className={s.dayName}>{d.name}</span>
+                                        <span className={s.dayNum}>{d.num}</span>
                                     </div>
-                                    );
-                                    })}
-                                </div>
-                                </div>
+                                ))}
                             </div>
 
-                            <div className={s.phoneChip}>
-                                <div className={s.phoneChipIcon}>💬</div>
-                                <div>
-                                    <div className={s.phoneChipTitle}>{t.chipTitle}</div>
-                                    <div className={s.phoneChipSub}>{t.chipSub}</div>
-                                </div>
+                            <div className={s.calBody}>
+                                <div className={s.lines} />
+                                {Array.from({ length: HOURS }, (_, i) => (
+                                    <span key={i} className={s.hour} style={{ gridRow: i * 2 + 1 }}>
+                                        {String(START_HOUR + i).padStart(2, '0')}:00
+                                    </span>
+                                ))}
+                                {events.map((e, i) => (
+                                    <div
+                                        key={i}
+                                        className={`${s.event} ${s[`ev_${e.tone}`]}`}
+                                        style={{
+                                            gridColumn: e.day + 2,
+                                            gridRow: `${half(e.from) + 1} / span ${half(e.to) - half(e.from)}`,
+                                        }}
+                                    >
+                                        <span className={s.evTime}>{e.from}</span>
+                                        <span className={s.evName}>{t.names[i]}</span>
+                                    </div>
+                                ))}
                             </div>
-                            </div>
-                            <div className={s.shadowPlane} />
                         </div>
                     </FadeSection>
                 </div>
-             </div>
+            </div>
         </section>
     );
 }

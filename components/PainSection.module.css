@@ -45,53 +45,40 @@
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 2px;
+    gap: 20px;
+    margin: 32px 0;
 }
 
 .item {
-    display: flex;
-    gap: 24px;
-    padding: 36px 32px 36px 0;
-    border-top: 1px solid var(--bege-mid);
-    align-items: flex-start;
-    transition: background 0.25s ease;
+    background: var(--bege);
+    border: 1px solid rgba(30, 20, 14, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    height: 100%;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .item:hover {
-    background: var(--bege);
-}
-
-.item:hover .num {
+    box-shadow: var(--shadow-md);
     transform: translateY(-2px);
-    color: var(--argila-dark);
 }
 
-.item:nth-child(even) {
-    padding-left: 32px;
-    padding-right: 0;
-    border-left: 1px solid var(--bege-mid);
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, currentColor 12%, transparent);
+    margin-bottom: 20px;
 }
 
-.item:nth-child(3),
-.item:nth-child(4) {
-    border-bottom: 1px solid var(--bege-mid);
-}
-
-.num {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--argila);
-    min-width: 32px;
-    padding-top: 2px;
-    transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.itemBody {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
+/* uma cor por cartão */
+.list > *:nth-child(1) .icon { color: var(--vermelho); }
+.list > *:nth-child(2) .icon { color: var(--oliva); }
+.list > *:nth-child(3) .icon { color: var(--argila); }
+.list > *:nth-child(4) .icon { color: #4A7BA7; }
 
 .itemTitle {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -99,6 +86,7 @@
     font-weight: 600;
     color: var(--castanho);
     line-height: 1.35;
+    margin-bottom: 8px;
 }
 
 .itemText {
@@ -145,20 +133,6 @@
 
     .list {
         grid-template-columns: 1fr;
-    }
-
-    .item:nth-child(even) {
-        padding-left: 0;
-        border-left: none;
-    }
-
-    .item:nth-child(3),
-    .item:nth-child(4) {
-        border-bottom: none;
-    }
-
-    .item:last-child {
-        border-bottom: 1px solid var(--bege-mid);
     }
 
     .title {

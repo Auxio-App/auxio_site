@@ -4,16 +4,27 @@ import FadeSection from "./FadeSection";
 import { useLang } from "@/lib/i18n";
 import s from "./PainSection.module.css";
 
+const icons = [
+    // calendário com X — confirmações manuais
+    <><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M8 3v4M16 3v4M3 10h18M9.5 14.5l5 4M14.5 14.5l-5 4" /></>,
+    // gráfico — controlo financeiro
+    <><rect x="3" y="4" width="18" height="17" rx="3" /><path d="M8 16v-3M12 16v-6M16 16v-4" /></>,
+    // pessoa ausente — faltas
+    <><circle cx="10" cy="8" r="4" /><path d="M3 21c0-3.9 3.1-6 7-6M16 15l5 5M21 15l-5 5" /></>,
+    // pastas dispersas — informação de clientes
+    <><rect x="3" y="6" width="11" height="9" rx="2" /><path d="M17 9h4v9a2 2 0 0 1-2 2H8" /></>,
+];
+
 const copy = {
     pt: {
-        label: 'O problema',
+        label: 'Para quem trabalha por conta própria',
         title: <>Gerir o teu negócio em várias ferramentas <br />não é sustentável.</>,
         desc: 'Processos dispersos criam erros, perdas e consomem o teu tempo.',
         pains: [
             {
-                title: 'Confirmações feitas manualmente',
-                body: 'Responde a cada mensagem. Confirma, cancela e reagenda individualmente.',
-                conclusion: 'Quando não respondes a tempo, a marcação perde-se.',
+                title: 'Marcações em três sítios',
+                body: 'Caderno, WhatsApp e memória.',
+                conclusion: 'Marcações perdidas e horários trocados sempre que algo não é passado a limpo.',
             },
             {
                 title: 'Falta de controlo financeiro',
@@ -26,7 +37,7 @@ const copy = {
                 conclusion: 'Tempo perdido e receita que não chega a entrar.',
             },
             {
-                title: 'Informação de clientes dispersa',
+                title: 'Histórico espalhado',
                 body: 'Sem histórico centralizado. Sem contexto entre marcações.',
                 conclusion: 'Dificuldade em acompanhar cada cliente com consistência.',
             },
@@ -35,14 +46,14 @@ const copy = {
         cta: 'Ver como o Auxio resolve isto →',
     },
     en: {
-        label: 'The problem',
+        label: 'For people working for themselves',
         title: <>Running your business across several tools <br />is not sustainable.</>,
         desc: 'Scattered processes create errors, losses and eat up your time.',
         pains: [
             {
-                title: 'Confirmations done by hand',
-                body: 'You reply to every message. You confirm, cancel and reschedule one by one.',
-                conclusion: 'When you don’t answer in time, the booking is lost.',
+                title: 'Bookings in three places',
+                body: 'Notebook, WhatsApp and memory.',
+                conclusion: 'Lost bookings and clashing slots whenever something never gets written down.',
             },
             {
                 title: 'No financial control',
@@ -55,7 +66,7 @@ const copy = {
                 conclusion: 'Wasted time and revenue that never comes in.',
             },
             {
-                title: 'Client information all over the place',
+                title: 'Scattered history',
                 body: 'No central history. No context between appointments.',
                 conclusion: 'Hard to follow each client with consistency.',
             },
@@ -89,12 +100,15 @@ export default function PainSection() {
                     {t.pains.map((pain, i) => (
                         <FadeSection key={i} delay={0.1 + i * 0.08}>
                             <div className={s.item}>
-                                <span className={s.num}>0{i + 1}</span>
-                                <div className={s.itemBody}>
-                                    <p className={s.itemTitle}>{pain.title}</p>
-                                    <p className={s.itemText}>{pain.body}</p>
-                                    <p className={s.itemText}>{pain.conclusion}</p>
-                                </div>
+                                <span className={s.icon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" strokeWidth="1.6"
+                                        strokeLinecap="round" strokeLinejoin="round">
+                                        {icons[i]}
+                                    </svg>
+                                </span>
+                                <p className={s.itemTitle}>{pain.title}</p>
+                                <p className={s.itemText}>{pain.body} {pain.conclusion}</p>
                             </div>
                         </FadeSection>
                     ))}
