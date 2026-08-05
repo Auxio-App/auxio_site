@@ -22,22 +22,19 @@ const copy = {
         desc: 'Processos dispersos criam erros, perdas e consomem o teu tempo.',
         pains: [
             {
-                title: 'Marcações em três sítios',
-                body: 'Caderno, WhatsApp e memória.',
-                conclusion: 'Marcações perdidas e horários trocados sempre que algo não é passado a limpo.',
+                title: 'Marcações dispersas',
+                body: 'Entre o caderno, o WhatsApp e o que ficou por escrever, há sempre uma que escapa.',
             },
             {
                 title: 'Falta de controlo financeiro',
-                body: 'Registos incompletos ou inexistentes.',
-                conclusion: 'Sem visibilidade clara sobre receitas, dívidas e desempenho.',
+                body: 'O mês fecha sem saberes ao certo o que entrou e o que ficou por receber.',
             },
             {
-                title: 'Faltas sem aviso prévio',
-                body: 'Clientes que não comparecem.',
-                conclusion: 'Tempo perdido e receita que não chega a entrar.',
+                title: 'Faltas de última hora',
+                body: 'A mensagem da véspera fica por enviar e o cliente não aparece. A hora fica vazia e a receita não entra.',
             },
             {
-                title: 'Histórico espalhado',
+                title: 'Histórico incompleto',
                 body: 'Sem histórico centralizado. Sem contexto entre marcações.',
                 conclusion: 'Dificuldade em acompanhar cada cliente com consistência.',
             },
@@ -51,22 +48,19 @@ const copy = {
         desc: 'Scattered processes create errors, losses and eat up your time.',
         pains: [
             {
-                title: 'Bookings in three places',
-                body: 'Notebook, WhatsApp and memory.',
-                conclusion: 'Lost bookings and clashing slots whenever something never gets written down.',
+                title: 'Scattered bookings',
+                body: 'Between the notebook, WhatsApp and whatever never got written down, there is always one that slips.',
             },
             {
                 title: 'No financial control',
-                body: 'Incomplete records — or none at all.',
-                conclusion: 'No clear visibility over revenue, debts and performance.',
+                body: 'The month ends without you knowing exactly what came in and what is still owed.',
             },
             {
-                title: 'No-shows without warning',
-                body: 'Clients who simply don’t turn up.',
-                conclusion: 'Wasted time and revenue that never comes in.',
+                title: 'Last-minute no-shows',
+                body: 'Yesterday’s message never gets sent and the client doesn’t turn up. The slot sits empty and the revenue never comes in.',
             },
             {
-                title: 'Scattered history',
+                title: 'Incomplete history',
                 body: 'No central history. No context between appointments.',
                 conclusion: 'Hard to follow each client with consistency.',
             },
