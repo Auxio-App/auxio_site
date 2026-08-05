@@ -15,7 +15,7 @@ const copy = {
     ctaGhost: 'Ver como funciona',
 
     mockDay: 'Quarta-feira, 5 de agosto',
-    mockHello: 'Olá, Auxio',
+    mockHello: 'Bom dia',
     headTitle: 'Marcações de hoje',
     headMeta: '3 marcações · 2 por fazer',
     nextLabel: 'A seguir',
