@@ -22,6 +22,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* ponytail: só Manrope, para o h1 do Hero. As restantes secções pedem
+            'Plus Jakarta Sans'/'Inter' e caem de propósito no sans-serif do
+            sistema — acrescenta as famílias aqui para as ativar. */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -30,7 +41,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Auxio',
-              alternateName: 'auxio.pt',
               url: 'https://auxio.pt',
             }),
           }}

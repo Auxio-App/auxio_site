@@ -18,7 +18,7 @@ const icons = [
 const copy = {
     pt: {
         label: 'Para quem trabalha por conta própria',
-        title: <>Gerir o teu negócio em várias ferramentas <br />não é sustentável.</>,
+        title: <>Gerir o teu negócio em várias ferramentas <br />não é sustentável</>,
         desc: 'O problema não é falta de organização. É estares constantemente a saltar entre aplicações para fazer coisas que deviam acontecer automaticamente.',
         pains: [
             {

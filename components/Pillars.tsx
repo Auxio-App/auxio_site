@@ -15,7 +15,7 @@ const icons = [
 const copy = {
   pt: {
     label: 'Uma plataforma em que podes confiar',
-    title: 'A forma como o Auxio foi pensado faz a diferença.',
+    title: 'A forma como o Auxio foi pensado faz a diferença',
     desc: 'Desde o primeiro dia, o Auxio foi pensado para simplificar o trabalho de quem vive de marcações. Isso significa uma plataforma simples de usar, construída com segurança desde a base e suficientemente flexível para acompanhar a forma como trabalhas.',
     pillars: [
       { title: 'Confiança', desc: 'Os dados dos teus clientes merecem o mesmo cuidado que o teu trabalho. Toda a informação é armazenada na União Europeia e a plataforma foi desenvolvida para cumprir o RGPD desde o primeiro dia.' },

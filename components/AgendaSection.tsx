@@ -32,7 +32,7 @@ const copy = {
         kicker: 'Funcionalidades',
         sectionTitle: 'Tudo o que precisas para gerir o teu negócio, num só lugar',
         label: 'Agenda',
-        title: 'A agenda acompanha o teu ritmo.',
+        title: 'A agenda acompanha o teu ritmo',
         desc: 'Consulta a agenda por dia, semana ou mês, reorganiza marcações com um simples arrastar e acompanha quem confirmou sem perder tempo em mensagens. Os pacotes de sessões são atualizados automaticamente para que saibas sempre o que falta e possas concentrar-te nos teus clientes.',
         items: [
             'Visualiza a agenda por dia, semana ou mês.',

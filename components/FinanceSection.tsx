@@ -17,7 +17,7 @@ const statIcons = [
 const copy = {
   pt: {
     label: 'Painel financeiro',
-    title: 'Sabe sempre como está o teu negócio.',
+    title: 'Sabe sempre como está o teu negócio',
     desc: 'Abre o painel financeiro e percebe, em segundos, quanto faturaste, o que ainda tens por receber e quanto realmente sobrou. As despesas recorrentes, comissões e restantes custos ficam registados automaticamente para que tenhas sempre uma visão atualizada do negócio.',
     items: [
       'Vê quem tem pagamentos em atraso e envia um lembrete em segundos.',

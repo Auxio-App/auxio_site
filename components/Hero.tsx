@@ -7,9 +7,9 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54Yji
 
 const copy = {
   pt: {
-    h1a: 'Tu tratas dos clientes.',
-    h1b: 'O Auxio trata ',
-    h1mark: 'do resto',
+    h1a: 'A forma mais simples',
+    h1b: 'de gerir o teu ',
+    h1mark: 'negócio',
     sub: 'Enquanto estás focado em atender clientes, o Auxio mantém o resto do negócio a funcionar. Agenda, confirmações automáticas, histórico de cada cliente, pagamentos e comunicação ficam reunidos num único painel, para que deixes de perder tempo entre o WhatsApp, folhas de cálculo e aplicações diferentes.',
     ctaPrimary: 'Quero acesso antecipado',
     ctaGhost: 'Ver como funciona',

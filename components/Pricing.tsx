@@ -9,8 +9,8 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54Yji
 const copy = {
   pt: {
     label: 'Preços',
-    title: 'Tudo o que precisas para gerir o teu negócio.',
-    desc: 'Começa com o essencial e evolui quando precisares. Sem contratos longos, sem custos escondidos e com a liberdade de cancelar quando quiseres',
+    title: 'Tudo o que precisas para gerir o teu negócio',
+    desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 7 dias, sem contratos longos, custos escondidos ou compromissos.',
     period: 'por mês · para profissionais individuais',
     cta: 'Subscrever',
     plans: [

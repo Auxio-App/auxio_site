@@ -7,7 +7,7 @@ import s from './Personas.module.css';
 const copy = {
   pt: {
     label: 'Para quem é',
-    title: <>Desenhado para profissionais<br />que atendem clientes todos os dias.</>,
+    title: <>Desenhado para profissionais<br />que atendem clientes todos os dias</>,
     personas: [
       {
         initials: 'AF', color: 'var(--argila)',

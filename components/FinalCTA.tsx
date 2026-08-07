@@ -8,8 +8,8 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54Yji
 
 const copy = {
   pt: {
-    title: 'Começa o próximo mês organizado.',
-    desc: 'Cria a conta, define os teus serviços e tens a agenda a funcionar no mesmo dia.',
+    title: 'Começa a recuperar o teu tempo',
+    desc: 'Deixa para trás a agenda desorganizada, as mensagens perdidas e o controlo manual do negócio. Cria a tua conta, configura os teus serviços e começa a gerir tudo num único lugar.',
     ctaPrimary: 'Marcar demonstração',
     ctaGhost: 'Ver as funcionalidades',
   },

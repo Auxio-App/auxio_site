@@ -7,7 +7,7 @@ import s from "./ServicesSection.module.css";
 const copy = {
     pt: {
         label: 'Catálogo de serviços',
-        title: 'Preços e durações definidos uma vez.',
+        title: 'Preços e durações definidos uma vez',
         desc: 'Organiza os teus serviços por categoria, define preços, durações e pacotes uma única vez. Depois, cada marcação torna-se mais rápida e tens uma visão clara dos serviços mais procurados e dos que geram mais receita.',
         items: [
             'Define categorias, cores, preços e durações para cada serviço.',
