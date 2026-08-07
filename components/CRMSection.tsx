@@ -7,12 +7,12 @@ import s from "./CRMSection.module.css";
 const copy = {
     pt: {
         label: 'Fichas de cliente',
-        title: 'Todo o histórico do cliente numa ficha só.',
-        desc: 'Contactos, notas de sessão, anexos, consentimentos e pagamentos por liquidar. Abres a ficha antes da consulta e sabes exactamente onde ficaste.',
+        title: 'Tudo sobre cada cliente, no mesmo sítio',
+        desc: 'Abre a ficha do cliente e continua exatamente onde a última sessão terminou. Toda a informação importante fica reunida no mesmo lugar, desde notas e documentos até consentimentos e pagamentos pendentes.',
         items: [
-            'Notas de sessão datadas, anexos e consentimentos assinados.',
-            'Alertas de pagamentos pendentes directamente na ficha.',
-            'Pesquisa rápida por nome, telefone ou email.',
+            'Guarda notas, documentos e consentimentos em cada ficha.',
+            'Vê imediatamente se existem pagamentos por regularizar.',
+            'Encontra qualquer cliente em segundos.',
         ],
         name: 'Beatriz Fernandes',
         initials: 'BF',
@@ -43,12 +43,12 @@ const copy = {
     },
     en: {
         label: 'Client records',
-        title: 'A client’s whole history in a single record.',
-        desc: 'Contacts, session notes, attachments, consents and outstanding payments. You open the record before the appointment and know exactly where you left off.',
+        title: 'Everything about each client, in one place',
+        desc: 'Open a client record and pick up exactly where the last session ended. All the information that matters sits in the same place, from notes and documents to consents and outstanding payments.',
         items: [
-            'Dated session notes, attachments and signed consents.',
-            'Outstanding payment alerts right on the record.',
-            'Quick search by name, phone or email.',
+            'Keep notes, documents and consents on every record.',
+            'See straight away whether there are payments still to settle.',
+            'Find any client in seconds.',
         ],
         name: 'Beatriz Fernandes',
         initials: 'BF',

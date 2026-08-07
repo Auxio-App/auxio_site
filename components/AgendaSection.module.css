@@ -35,7 +35,13 @@
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 64px;
-  align-items: center;
+  align-items: start;
+}
+
+/* ponytail: desce o cartão pela altura do pill + margem, para o topo alinhar
+   com o título em vez de com o pill. Se o pill mudar de padding/fonte, ajusta aqui. */
+.right {
+  padding-top: 49px;
 }
 
 /* ---------- Coluna esquerda ---------- */
@@ -101,7 +107,7 @@
 /* ---------- Cartão do calendário ---------- */
 .calCard {
   --gutter: 36px;
-  --slot: 22px;          /* meia hora */
+  --slot: 21px;          /* meia hora — 12 slots; afina a altura do cartão */
   background: var(--white);
   border-radius: var(--radius-lg);
   padding: 14px 16px 16px;

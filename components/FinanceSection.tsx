@@ -17,12 +17,12 @@ const statIcons = [
 const copy = {
   pt: {
     label: 'Painel financeiro',
-    title: 'O estado do negócio num só ecrã.',
-    desc: 'Quanto faturaste, quem te deve e qual o lucro que sobrou. Três perguntas respondidas em menos de dez segundos, sem folhas de cálculo.',
+    title: 'Sabe sempre como está o teu negócio.',
+    desc: 'Abre o painel financeiro e percebe, em segundos, quanto faturaste, o que ainda tens por receber e quanto realmente sobrou. As despesas recorrentes, comissões e restantes custos ficam registados automaticamente para que tenhas sempre uma visão atualizada do negócio.',
     items: [
-      'Lista de quem deve, há quantos dias, com lembrete num clique.',
-      'Estado de pagamento por marcação: pago, pendente ou parcial.',
-      'Renda, seguros e consumíveis lançados automaticamente.',
+      'Vê quem tem pagamentos em atraso e envia um lembrete em segundos.',
+      'Vê o estado de pagamento de cada marcação, incluindo pagamentos parciais.',
+      'Automatiza despesas recorrentes e o cálculo de comissões.',
     ],
     period: 'Agosto 2026',
     badge: 'Em dia',
@@ -44,12 +44,12 @@ const copy = {
   },
   en: {
     label: 'Financial dashboard',
-    title: 'The state of the business on one screen.',
-    desc: 'How much you invoiced, who owes you and what profit is left. Three questions answered in under ten seconds, with no spreadsheets.',
+    title: 'Always know how your business is doing.',
+    desc: 'Open the financial dashboard and see in seconds how much you invoiced, what you still have to collect and how much actually stayed with you. Recurring expenses, commissions and other costs are logged automatically, so your view of the business is always up to date.',
     items: [
-      'A list of who owes you, for how long, with a reminder in one click.',
-      'Payment status per booking: paid, pending or partial.',
-      'Rent, insurance and consumables logged automatically.',
+      'See who has overdue payments and send a reminder in seconds.',
+      'See the payment status of every booking, including partial payments.',
+      'Automate recurring expenses and commission calculations.',
     ],
     period: 'August 2026',
     badge: 'Up to date',

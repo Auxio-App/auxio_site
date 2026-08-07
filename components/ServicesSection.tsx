@@ -8,11 +8,11 @@ const copy = {
     pt: {
         label: 'Catálogo de serviços',
         title: 'Preços e durações definidos uma vez.',
-        desc: 'Organiza os serviços por categoria, cria pacotes com desconto e vê quais é que realmente enchem a agenda. Marcar passa a ser dois cliques.',
+        desc: 'Organiza os teus serviços por categoria, define preços, durações e pacotes uma única vez. Depois, cada marcação torna-se mais rápida e tens uma visão clara dos serviços mais procurados e dos que geram mais receita.',
         items: [
-            'Categorias, cores e durações para preencher a agenda certa.',
-            'Pacotes e preços especiais sem contas à mão.',
-            'Ranking de serviços por faturação e número de marcações.',
+            'Define categorias, cores, preços e durações para cada serviço.',
+            'Cria pacotes e preços especiais sem fazer contas manualmente.',
+            'Descobre quais são os serviços mais procurados e mais rentáveis.',
         ],
         badge: 'Mais popular este mês',
         heroName: 'Fisioterapia — sessão individual',
@@ -31,11 +31,11 @@ const copy = {
     en: {
         label: 'Service catalogue',
         title: 'Prices and durations set once.',
-        desc: 'Organise services by category, build discounted packs and see which ones actually fill the calendar. Booking becomes two clicks.',
+        desc: 'Organise your services by category and set prices, durations and packs just once. After that every booking gets faster, and you get a clear view of which services are most in demand and which bring in the most revenue.',
         items: [
-            'Categories, colours and durations to fill the right slots.',
-            'Packs and special prices with no maths by hand.',
-            'Service ranking by revenue and number of bookings.',
+            'Set categories, colours, prices and durations for each service.',
+            'Build packs and special prices without doing the maths by hand.',
+            'Find out which services are the most in demand and the most profitable.',
         ],
         badge: 'Most popular this month',
         heroName: 'Physiotherapy — single session',

@@ -19,24 +19,23 @@ const copy = {
     pt: {
         label: 'Para quem trabalha por conta própria',
         title: <>Gerir o teu negócio em várias ferramentas <br />não é sustentável.</>,
-        desc: 'Processos dispersos criam erros, perdas e consomem o teu tempo.',
+        desc: 'O problema não é falta de organização. É estares constantemente a saltar entre aplicações para fazer coisas que deviam acontecer automaticamente.',
         pains: [
             {
-                title: 'Marcações dispersas',
-                body: 'Entre o caderno, o WhatsApp e o que ficou por escrever, há sempre uma que escapa.',
+                title: 'Marcações perdidas ou trocadas',
+                body: 'Entre o WhatsApp, chamadas, um caderno e notas soltas, basta uma alteração esquecida para criar horários trocados, clientes à espera e tempo perdido.',
             },
             {
-                title: 'Falta de controlo financeiro',
-                body: 'O mês fecha sem saberes ao certo o que entrou e o que ficou por receber.',
+                title: 'Pagamentos por confirmar',
+                body: 'Sabes que trabalhaste muito, mas no final do mês continua difícil perceber quanto recebeste, o que ainda está por cobrar ou quais os serviços que realmente dão mais lucro.',
             },
             {
                 title: 'Faltas de última hora',
-                body: 'A mensagem da véspera fica por enviar e o cliente não aparece. A hora fica vazia e a receita não entra.',
+                body: 'Um simples lembrete pode evitar uma consulta perdida. Quando essa mensagem depende de te lembrares de a enviar, as faltas aumentam e acabas por perder tempo e faturação.',
             },
             {
-                title: 'Histórico incompleto',
-                body: 'Sem histórico centralizado. Sem contexto entre marcações.',
-                conclusion: 'Dificuldade em acompanhar cada cliente com consistência.',
+                title: 'Cada cliente tem informação espalhada',
+                body: 'Notas, documentos e histórico acabam divididos entre aplicações, papéis e mensagens. Sempre que precisas de recuperar informação, perdes tempo à procura em vez de acompanhar o cliente com confiança.',
             },
         ],
         bold: 'Simplifica a gestão do teu negócio',
@@ -45,24 +44,23 @@ const copy = {
     en: {
         label: 'For people working for themselves',
         title: <>Running your business across several tools <br />is not sustainable.</>,
-        desc: 'Scattered processes create errors, losses and eat up your time.',
+        desc: 'The problem is not a lack of organisation. It is constantly jumping between apps to do things that should happen on their own.',
         pains: [
             {
-                title: 'Scattered bookings',
-                body: 'Between the notebook, WhatsApp and whatever never got written down, there is always one that slips.',
+                title: 'Bookings lost or mixed up',
+                body: 'Between WhatsApp, phone calls, a notebook and loose notes, one forgotten change is enough to create clashing slots, clients left waiting and time wasted.',
             },
             {
-                title: 'No financial control',
-                body: 'The month ends without you knowing exactly what came in and what is still owed.',
+                title: 'Payments left unconfirmed',
+                body: 'You know you worked hard, but at the end of the month it is still hard to tell how much came in, what is still owed or which services actually make the most profit.',
             },
             {
                 title: 'Last-minute no-shows',
-                body: 'Yesterday’s message never gets sent and the client doesn’t turn up. The slot sits empty and the revenue never comes in.',
+                body: 'A simple reminder can save an appointment. When that message depends on you remembering to send it, no-shows go up and you end up losing time and revenue.',
             },
             {
-                title: 'Incomplete history',
-                body: 'No central history. No context between appointments.',
-                conclusion: 'Hard to follow each client with consistency.',
+                title: 'Every client’s information is scattered',
+                body: 'Notes, documents and history end up split between apps, paper and messages. Every time you need to find something, you lose time searching instead of following the client with confidence.',
             },
         ],
         bold: 'Simplify how you run your business',

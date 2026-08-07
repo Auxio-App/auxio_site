@@ -10,7 +10,7 @@ const copy = {
     h1a: 'Tu tratas dos clientes.',
     h1b: 'O Auxio trata ',
     h1mark: 'do resto',
-    sub: 'Agenda com lembretes prontos a enviar, finanças em tempo real e o histórico de cada cliente num só lugar. Sem folhas de cálculo, sem mensagens perdidas.',
+    sub: 'Enquanto estás focado em atender clientes, o Auxio mantém o resto do negócio a funcionar. Agenda, confirmações automáticas, histórico de cada cliente, pagamentos e comunicação ficam reunidos num único painel, para que deixes de perder tempo entre o WhatsApp, folhas de cálculo e aplicações diferentes.',
     ctaPrimary: 'Quero acesso antecipado',
     ctaGhost: 'Ver como funciona',
 
@@ -57,12 +57,12 @@ const copy = {
     h1a: 'You take care of clients.',
     h1b: 'Auxio handles ',
     h1mark: 'the rest',
-    sub: 'A calendar with reminders ready to send, real-time finances and every client’s history in one place. No spreadsheets, no lost messages.',
+    sub: 'While you stay focused on seeing clients, Auxio keeps the rest of the business running. Calendar, automatic confirmations, every client’s history, payments and messaging all come together in a single dashboard, so you stop losing time between WhatsApp, spreadsheets and different apps.',
     ctaPrimary: 'Get early access',
     ctaGhost: 'See how it works',
 
     mockDay: 'Wednesday, 5 August',
-    mockHello: 'Hi, Auxio',
+    mockHello: 'Good morning',
     headTitle: 'Today’s bookings',
     headMeta: '3 bookings · 2 to handle',
     nextLabel: 'Up next',

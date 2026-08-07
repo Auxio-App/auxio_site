@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Auxio - O co-piloto do profissional moderno',
-    description: 'Recupera 5 horas por semana. Zero faltas. Zero trabalho manual.',
+    description: 'Recupera horas todas as semanas. Zero faltas. Zero trabalho manual.',
     url: 'https://auxio.pt',
     siteName: 'Auxio',
     locale: 'pt_PT',

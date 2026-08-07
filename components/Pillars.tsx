@@ -14,25 +14,25 @@ const icons = [
 
 const copy = {
   pt: {
-    label: 'Os nossos valores',
-    title: 'Construído com um propósito.',
-    desc: 'O Auxio foi desenhado para te ajudar a gerir o teu negócio. Dados na UE, RGPD cumprido e sem lock-in.',
+    label: 'Uma plataforma em que podes confiar',
+    title: 'A forma como o Auxio foi pensado faz a diferença.',
+    desc: 'Desde o primeiro dia, o Auxio foi pensado para simplificar o trabalho de quem vive de marcações. Isso significa uma plataforma simples de usar, construída com segurança desde a base e suficientemente flexível para acompanhar a forma como trabalhas.',
     pillars: [
-      { title: 'Confiança', desc: 'Os dados dos teus clientes são tratados com máxima responsabilidade. Dados sempre na Europa, RGPD desde o primeiro dia.' },
-      { title: 'Simplicidade', desc: 'O profissional já tem a vida complicada. Menos cliques, menos dúvidas, mais tempo. Sem formação técnica necessária.' },
-      { title: 'Inteligência', desc: 'O Auxio prepara o trabalho repetitivo por ti: lembretes prontos a enviar, recibos e alertas de pagamento, para que não tenhas de pensar nisso.' },
-      { title: 'Autonomia', desc: 'Exportação de dados fácil, sem lock-in, configuração flexível. O produto serve-te, não o contrário.' },
+      { title: 'Confiança', desc: 'Os dados dos teus clientes merecem o mesmo cuidado que o teu trabalho. Toda a informação é armazenada na União Europeia e a plataforma foi desenvolvida para cumprir o RGPD desde o primeiro dia.' },
+      { title: 'Simplicidade', desc: 'Já tens trabalho suficiente com os teus clientes. O Auxio foi desenhado para ser intuitivo desde o primeiro dia, sem configurações complicadas nem horas de formação. Sem formação técnica necessária.' },
+      { title: 'Automatização', desc: 'O Auxio trata das tarefas repetitivas por ti. Lembretes, alertas, recibos e outras rotinas acontecem automaticamente para que possas dedicar esse tempo aos teus clientes.' },
+      { title: 'Autonomia', desc: 'Os teus dados são teus. Podes exportá-los quando quiseres e adaptar a plataforma à forma como trabalhas, sem ficares preso ao software.' },
     ],
   },
   en: {
-    label: 'Our values',
-    title: 'Built with a purpose.',
-    desc: 'Auxio was designed to help you run your business. Data in the EU, GDPR compliant and no lock-in.',
+    label: 'A platform you can rely on',
+    title: 'The way Auxio was built makes the difference.',
+    desc: 'From day one, Auxio was designed to simplify the work of people who live off appointments. That means a platform that is simple to use, built securely from the ground up and flexible enough to keep up with the way you work.',
     pillars: [
-      { title: 'Trust', desc: 'Your clients’ data is handled with the utmost responsibility. Data always in Europe, GDPR from day one.' },
-      { title: 'Simplicity', desc: 'Your life is complicated enough. Fewer clicks, fewer doubts, more time. No technical training required.' },
-      { title: 'Intelligence', desc: 'Auxio prepares the repetitive work for you: reminders ready to send, receipts and payment alerts, so you never have to think about it.' },
-      { title: 'Autonomy', desc: 'Easy data export, no lock-in, flexible configuration. The product serves you, not the other way around.' },
+      { title: 'Trust', desc: 'Your clients’ data deserves the same care as your work. All information is stored in the European Union and the platform was built to comply with GDPR from day one.' },
+      { title: 'Simplicity', desc: 'You already have enough work with your clients. Auxio was designed to be intuitive from the first day, with no complicated setup and no hours of training. No technical background required.' },
+      { title: 'Automation', desc: 'Auxio takes care of the repetitive tasks for you. Reminders, alerts, receipts and other routines happen automatically, so you can give that time back to your clients.' },
+      { title: 'Autonomy', desc: 'Your data is yours. You can export it whenever you want and adapt the platform to the way you work, without being locked into the software.' },
     ],
   },
 };

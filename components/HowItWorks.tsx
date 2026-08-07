@@ -7,22 +7,22 @@ import s from './HowItWorks.module.css';
 const copy = {
   pt: {
     label: 'Como funciona',
-    title: <>Do registo ao primeiro cliente<br />em menos de 10 minutos.</>,
+    title: <>Da criação da conta à gestão do<br/>teu negócio em poucos minutos</>,
     steps: [
-      { num: '1', title: 'Crias a tua conta', desc: 'Registo em 3 passos. Defines os teus serviços, horários e preços.' },
-      { num: '2', title: 'Adicionas os clientes', desc: 'Crias a ficha de cada cliente em segundos — nome e contacto chegam para começar.' },
-      { num: '3', title: 'O Auxio trata do resto', desc: 'Lembretes prontos a enviar, recibos e alertas de pagamento — o Auxio prepara tudo por ti.' },
-      { num: '4', title: 'Recuperas o teu tempo', desc: '5 horas por semana de volta. Focas-te nos clientes, não na gestão.' },
+      { num: '1', title: 'Cria a tua conta', desc: 'Configura os teus serviços, horários e preços. O Auxio fica pronto para começar contigo.' },
+      { num: '2', title: 'Organiza os teus clientes', desc: 'Cria a ficha dos teus clientes em segundos e mantém tudo organizado num só lugar.' },
+      { num: '3', title: 'O Auxio trata do resto', desc: 'Lembretes, recibos e alertas de pagamento ficam automatizados para não perderes tempo.' },
+      { num: '4', title: 'Foca-te no que importa', desc: 'Menos tarefas de gestão, mais tempo para te dedicares aos teus clientes.' },
     ],
   },
   en: {
     label: 'How it works',
-    title: <>From sign-up to your first client<br />in under 10 minutes.</>,
+    title: <>From creating your account to running<br />your business in just a few minutes</>,
     steps: [
-      { num: '1', title: 'Create your account', desc: 'Sign up in 3 steps. Set your services, hours and prices.' },
-      { num: '2', title: 'Add your clients', desc: 'Create each client’s profile in seconds — a name and contact are enough to start.' },
-      { num: '3', title: 'Auxio handles the rest', desc: 'Reminders ready to send, receipts and payment alerts — Auxio prepares it all for you.' },
-      { num: '4', title: 'Get your time back', desc: '5 hours a week returned. You focus on clients, not admin.' },
+      { num: '1', title: 'Create your account', desc: 'Set up your services, hours and prices. Auxio is ready to start alongside you.' },
+      { num: '2', title: 'Organise your clients', desc: 'Create your client records in seconds and keep everything organised in one place.' },
+      { num: '3', title: 'Auxio handles the rest', desc: 'Reminders, receipts and payment alerts are automated so you don’t lose time.' },
+      { num: '4', title: 'Focus on what matters', desc: 'Fewer admin tasks, more time to dedicate to your clients.' },
     ],
   },
 };

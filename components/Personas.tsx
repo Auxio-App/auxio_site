@@ -14,7 +14,7 @@ const copy = {
         name: 'Andreia, 48 anos - Fisioterapeuta',
         role: 'Trabalhadora independente',
         pain: '“Perco 1 hora por dia a confirmar marcações pelo WhatsApp.”',
-        hook: '→ Recupera 5 horas por semana ainda este mês.',
+        hook: '→ Recupera horas todas as semanas ainda este mês.',
       },
       {
         initials: 'SL', color: 'var(--oliva)',
@@ -37,7 +37,7 @@ const copy = {
         name: 'Andreia, 48 - Physiotherapist',
         role: 'Self-employed',
         pain: '“I lose an hour a day confirming appointments on WhatsApp.”',
-        hook: '→ Get 5 hours a week back, starting this month.',
+        hook: '→ Get hours back every week, starting this month.',
       },
       {
         initials: 'SL', color: 'var(--oliva)',
