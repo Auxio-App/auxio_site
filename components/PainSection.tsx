@@ -100,7 +100,7 @@ export default function PainSection() {
                                     </svg>
                                 </span>
                                 <p className={s.itemTitle}>{pain.title}</p>
-                                <p className={s.itemText}>{pain.body} {pain.conclusion}</p>
+                                <p className={s.itemText}>{pain.body}</p>
                             </div>
                         </FadeSection>
                     ))}
