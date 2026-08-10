@@ -5,13 +5,12 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://auxio.pt'),
   applicationName: 'Auxio',
-  title: 'Auxio - O co-piloto do profissional moderno',
-  description: 'Agenda, clientes, financeiro e comunicação - tudo num só lugar. O Auxio elimina o trabalho manual para que te possas focar nos teus clientes.',
-  keywords: 'gestão, agenda, profissionais, fisioterapia, psicologia, CRM, faturação, WhatsApp',
+  title: 'Auxio - Agenda e gestão de clientes para profissionais',
+  description: 'Software de marcações para fisioterapeutas, psicólogos, esteticistas e outros profissionais. Agenda, lembretes automáticos, ficha de cliente e pagamentos num só painel. 7 dias grátis.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Auxio - O co-piloto do profissional moderno',
-    description: 'Recupera horas todas as semanas. Zero faltas. Zero trabalho manual.',
+    title: 'Auxio - Agenda e gestão de clientes para profissionais',
+    description: 'Marcações, lembretes automáticos, histórico de clientes e pagamentos num só painel. Recupera horas todas as semanas.',
     url: 'https://auxio.pt',
     siteName: 'Auxio',
     locale: 'pt_PT',
@@ -37,12 +36,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'Auxio',
-              url: 'https://auxio.pt',
-            }),
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Auxio',
+                url: 'https://auxio.pt',
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                name: 'Auxio',
+                url: 'https://auxio.pt',
+                applicationCategory: 'BusinessApplication',
+                operatingSystem: 'Web, iOS, Android',
+                inLanguage: 'pt-PT',
+                // ponytail: só o plano que está mesmo à venda. Pro e Team
+                // estão "Em breve" — acrescenta-os aqui quando lançarem.
+                offers: {
+                  '@type': 'Offer',
+                  price: '15',
+                  priceCurrency: 'EUR',
+                  category: 'subscription',
+                  url: 'https://auxio.pt/#precos',
+                },
+              },
+            ]),
           }}
         />
         <LangProvider>{children}</LangProvider>

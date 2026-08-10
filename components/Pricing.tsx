@@ -38,7 +38,7 @@ const copy = {
           'Agenda completa com drag & drop',
           'Ficha completa do cliente com histórico e notas',
           'Painel financeiro com receitas, despesas e lucro líquido',
-          'Notificações de confirtmação e lembretes semi-automáticos',
+          'Notificações de confirmação e lembretes semi-automáticos',
           'App instalável no telemóvel e computador',
         ],
       },
