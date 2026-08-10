@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className={s.footer}>
       <div className={s.logo}>
-        <Image src="/Logo4.png" alt="Auxio" width={30} height={30} />
+        <Image src="/logo.png" alt="Auxio" width={30} height={30} />
         Auxio
       </div>
       <div className={s.text}>{t.tagline}</div>

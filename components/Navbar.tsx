@@ -64,7 +64,7 @@ export default function Navbar() {
   return (
     <nav className={`${s.nav} ${scrolled ? s.scrolled : ''}`}>
       <Link href="/" className={s.logo}>
-        <Image src="/Logo4.png" alt="Auxio" className={s.logoImg} width={32} height={32} />
+        <Image src="/logo.png" alt="Auxio" className={s.logoImg} width={32} height={32} />
         Auxio
       </Link>
 
