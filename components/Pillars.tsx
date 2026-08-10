@@ -4,7 +4,7 @@ import FadeSection from './FadeSection';
 import { useLang } from '@/lib/i18n';
 import s from './Pillars.module.css';
 
-/* confiança · simplicidade · inteligência · autonomia */
+/* confiança · simplicidade · automatização · autonomia */
 const icons = [
   <g key="0"><path d="M8 1.5l5 2v4.2c0 3.2-2.1 5.6-5 6.8-2.9-1.2-5-3.6-5-6.8V3.5l5-2z" /><path d="M5.8 8l1.6 1.6L10.4 6.5" /></g>,
   <g key="1"><path d="M8 1.8l1.6 4.3 4.3 1.6-4.3 1.6L8 13.6l-1.6-4.3L2.1 7.7l4.3-1.6L8 1.8z" /></g>,
@@ -26,7 +26,7 @@ const copy = {
   },
   en: {
     label: 'A platform you can rely on',
-    title: 'The way Auxio was built makes the difference.',
+    title: 'The way Auxio was built makes the difference',
     desc: 'From day one, Auxio was designed to simplify the work of people who live off appointments. That means a platform that is simple to use, built securely from the ground up and flexible enough to keep up with the way you work.',
     pillars: [
       { title: 'Trust', desc: 'Your clients’ data deserves the same care as your work. All information is stored in the European Union and the platform was built to comply with GDPR from day one.' },

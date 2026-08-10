@@ -30,7 +30,7 @@ const copy = {
     },
     en: {
         label: 'Service catalogue',
-        title: 'Prices and durations set once.',
+        title: 'Prices and durations set once',
         desc: 'Organise your services by category and set prices, durations and packs just once. After that every booking gets faster, and you get a clear view of which services are most in demand and which bring in the most revenue.',
         items: [
             'Set categories, colours, prices and durations for each service.',

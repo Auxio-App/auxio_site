@@ -61,7 +61,7 @@ const copy = {
         kicker: 'Features',
         sectionTitle: 'Everything you need to run your business, in one place',
         label: 'Calendar',
-        title: 'A calendar that keeps up with you.',
+        title: 'A calendar that keeps up with you',
         desc: 'View your calendar by day, week or month, reorganise bookings with a simple drag and keep track of who confirmed without wasting time on messages. Session packs update on their own, so you always know what is left and can focus on your clients.',
         items: [
             'View your calendar by day, week or month.',

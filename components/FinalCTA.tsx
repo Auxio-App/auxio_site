@@ -14,8 +14,8 @@ const copy = {
     ctaGhost: 'Ver as funcionalidades',
   },
   en: {
-    title: 'Start next month organised.',
-    desc: 'Create your account, set up your services and have the calendar running the same day.',
+    title: 'Start getting your time back',
+    desc: 'Leave behind the disorganised calendar, the lost messages and running the business by hand. Create your account, set up your services and start managing everything in one place.',
     ctaPrimary: 'Book a demo',
     ctaGhost: 'See the features',
   },

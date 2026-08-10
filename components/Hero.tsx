@@ -54,9 +54,9 @@ const copy = {
     ],
   },
   en: {
-    h1a: 'You take care of clients.',
-    h1b: 'Auxio handles ',
-    h1mark: 'the rest',
+    h1a: 'The simplest way',
+    h1b: 'to run your ',
+    h1mark: 'business',
     sub: 'While you stay focused on seeing clients, Auxio keeps the rest of the business running. Calendar, automatic confirmations, every client’s history, payments and messaging all come together in a single dashboard, so you stop losing time between WhatsApp, spreadsheets and different apps.',
     ctaPrimary: 'Get early access',
     ctaGhost: 'See how it works',

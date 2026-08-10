@@ -30,7 +30,7 @@ const copy = {
   },
   en: {
     label: 'Who it’s for',
-    title: <>Designed for professionals<br />who see clients every single day.</>,
+    title: <>Designed for professionals<br />who see clients every single day</>,
     personas: [
       {
         initials: 'AF', color: 'var(--argila)',
@@ -41,7 +41,7 @@ const copy = {
       },
       {
         initials: 'SL', color: 'var(--oliva)',
-        name: 'Sofia, 29 - Esthetician',
+        name: 'Sofia, 29 - Aesthetician',
         role: 'Self-employed · Shared space',
         pain: '“I don’t know what I earned this month until I do the maths at the end.”',
         hook: '→ Auxio does the maths for you, in real time.',

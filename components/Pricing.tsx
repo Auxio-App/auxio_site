@@ -62,8 +62,8 @@ const copy = {
   },
   en: {
     label: 'Pricing',
-    title: 'Everything you need to run your business.',
-    desc: 'Start with the essentials and move up when you need to. No long contracts, no hidden costs and the freedom to cancel whenever you want',
+    title: 'Everything you need to run your business',
+    desc: 'Start with the essentials and move up when you need to. Try Auxio free for 7 days, with no long contracts, hidden costs or commitments.',
     period: 'per month · for individual professionals',
     cta: 'Subscribe',
     plans: [
@@ -90,8 +90,9 @@ const copy = {
           '1 professional · unlimited clients',
           'Full calendar with drag & drop',
           'Complete client profile with history and notes',
-          'Personalised WhatsApp reminders',
-          'Cost tracking with profit calculated automatically',
+          'Financial dashboard with income, expenses and net profit',
+          'Confirmation notifications and semi-automatic reminders',
+          'Installable app on phone and computer',
         ],
       },
       {
@@ -103,10 +104,10 @@ const copy = {
         features: [
           'Up to 5 professionals included',
           'Everything in the Pro plan',
-          'Consolidated calendar with per-professional view',
-          'Multi-room and multi-resource mode',
+          'Consolidated calendar by professional',
+          'Room and resource management',
           'Team management: invite, remove and set permissions',
-          'Distinct roles: Admin, Professional, Staff',
+          'Different access levels: Admin, Professional and Staff',
           'Unified clinic dashboard',
         ],
       },

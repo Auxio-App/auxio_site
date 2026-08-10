@@ -43,7 +43,7 @@ const copy = {
     },
     en: {
         label: 'For people working for themselves',
-        title: <>Running your business across several tools <br />is not sustainable.</>,
+        title: <>Running your business across several tools <br />is not sustainable</>,
         desc: 'The problem is not a lack of organisation. It is constantly jumping between apps to do things that should happen on their own.',
         pains: [
             {

@@ -44,7 +44,7 @@ const copy = {
   },
   en: {
     label: 'Financial dashboard',
-    title: 'Always know how your business is doing.',
+    title: 'Always know how your business is doing',
     desc: 'Open the financial dashboard and see in seconds how much you invoiced, what you still have to collect and how much actually stayed with you. Recurring expenses, commissions and other costs are logged automatically, so your view of the business is always up to date.',
     items: [
       'See who has overdue payments and send a reminder in seconds.',
