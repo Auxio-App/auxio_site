@@ -38,10 +38,15 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /* 1fr iguala a altura de todas as linhas à do cartão com mais texto */
+  grid-auto-rows: 1fr;
   gap: 20px;
 }
 
 .card {
+  /* o filho da grelha é o wrapper do FadeSection, que já estica; sem isto
+     o cartão encolhe até ao texto e as alturas voltam a divergir */
+  height: 100%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: var(--radius-lg);
   padding: 28px 30px 30px;
@@ -88,6 +93,8 @@
 
   .grid {
     grid-template-columns: 1fr;
+    /* empilhados não há comparação lado a lado: igualar só deixava buracos */
+    grid-auto-rows: auto;
   }
 }
 
