@@ -11,12 +11,12 @@ const copy = {
     label: 'Preços',
     title: 'Tudo o que precisas para gerir o teu negócio',
     desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 7 dias, sem contratos longos, custos escondidos ou compromissos.',
-    period: 'por mês · para profissionais individuais',
+    
     cta: 'Subscrever',
     plans: [
       {
         subtitle: 'Auxio Pro - Em breve',
-        price: '29',
+        // price: '29',
         featured: false,
         cta: false,
         features: [
@@ -30,7 +30,8 @@ const copy = {
       },
       {
         subtitle: 'Auxio Basic · Lançamento',
-        price: '15',
+        price: '19',
+        period: 'por mês · para profissionais individuais',
         featured: true,
         cta: true,
         features: [
@@ -44,8 +45,8 @@ const copy = {
       },
       {
         subtitle: 'Auxio Team - Em breve',
-        price: '79',
-        period: 'por mês · para equipas e clínicas',
+        // price: '79',
+        // period: 'por mês · para equipas e clínicas',
         featured: false,
         cta: false,
         features: [
@@ -64,12 +65,12 @@ const copy = {
     label: 'Pricing',
     title: 'Everything you need to run your business',
     desc: 'Start with the essentials and move up when you need to. Try Auxio free for 7 days, with no long contracts, hidden costs or commitments.',
-    period: 'per month · for individual professionals',
+    
     cta: 'Subscribe',
     plans: [
       {
         subtitle: 'Auxio Pro - Coming soon',
-        price: '29',
+        
         featured: false,
         cta: false,
         features: [
@@ -83,7 +84,8 @@ const copy = {
       },
       {
         subtitle: 'Auxio Basic · Launch',
-        price: '15',
+        price: '19',
+        period: 'per month · for individual professionals',
         featured: true,
         cta: true,
         features: [
@@ -97,8 +99,7 @@ const copy = {
       },
       {
         subtitle: 'Auxio Team - Coming soon',
-        price: '79',
-        period: 'per month · for teams and clinics',
+       
         featured: false,
         cta: false,
         features: [
@@ -130,8 +131,7 @@ export default function Pricing() {
             <FadeSection key={i} delay={i * 0.1 + 0.2} className={plan.featured ? s.featuredWrapper : ''}>
               <div className={`${s.card} ${plan.featured ? s.cardFeatured : ''}`}>
                 <div className={s.plan}>{plan.subtitle}</div>
-                <div className={s.price}><sup>€</sup>{plan.price}</div>
-                <div className={s.period}>{'period' in plan ? plan.period : t.period}</div>
+                <div className={s.price}><sup>€</sup>{plan.price}</div>                
                 <ul className={s.features}>
                   {plan.features.map((f, j) => (
                     <li key={j}><span className={s.check}>✓</span>{f}</li>
