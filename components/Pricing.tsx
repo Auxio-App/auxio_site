@@ -11,21 +11,22 @@ const copy = {
     label: 'Preços',
     title: 'Tudo o que precisas para gerir o teu negócio',
     desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 7 dias, sem contratos longos, custos escondidos ou compromissos.',
-    
     cta: 'Subscrever',
+    priceTBA: 'Preço a anunciar',
     plans: [
       {
         subtitle: 'Auxio Pro - Em breve',
-        // price: '29',
         featured: false,
         cta: false,
         features: [
           'Tudo o que está no plano Basic',
-          'Previsão de cancelamentos com antecedência',
+          'Envio automático de lembretes e confirmações',
+          'Painel financeiro completo: custos fixos e variáveis, lucro líquido e evolução',
           'Previsão de receita para as próximas semanas',
           'Análise de receita por serviço e horário',
+          'Alertas de risco de falta, aprendidos com o teu histórico',
           'Chatbot com IA',
-          'Resumo de consulta por voz (Whisper)',
+          'Resumo de consulta por voz',
         ],
       },
       {
@@ -38,15 +39,13 @@ const copy = {
           '1 profissional · clientes ilimitados',
           'Agenda completa com drag & drop',
           'Ficha completa do cliente com histórico e notas',
-          'Painel financeiro com receitas, despesas e lucro líquido',
-          'Notificações de confirmação e lembretes semi-automáticos',
+          'Receita do mês e pagamentos pendentes',
+          'Mensagens de lembrete e confirmação prontas a enviar',
           'App instalável no telemóvel e computador',
         ],
       },
       {
         subtitle: 'Auxio Team - Em breve',
-        // price: '79',
-        // period: 'por mês · para equipas e clínicas',
         featured: false,
         cta: false,
         features: [
@@ -65,21 +64,22 @@ const copy = {
     label: 'Pricing',
     title: 'Everything you need to run your business',
     desc: 'Start with the essentials and move up when you need to. Try Auxio free for 7 days, with no long contracts, hidden costs or commitments.',
-    
     cta: 'Subscribe',
+    priceTBA: 'Price to be announced',
     plans: [
       {
         subtitle: 'Auxio Pro - Coming soon',
-        
         featured: false,
         cta: false,
         features: [
           'Everything in the Basic plan',
-          'Cancellation prediction in advance',
+          'Automatic sending of reminders and confirmations',
+          'Complete financial dashboard: fixed and variable costs, net profit and evolution',
           'Revenue forecast for the coming weeks',
           'Revenue analysis by service and time slot',
+          'Failure-risk alerts, learned from your history',
           'AI chatbot',
-          'Voice appointment summaries (Whisper)',
+          'Voice appointment summaries',
         ],
       },
       {
@@ -92,14 +92,13 @@ const copy = {
           '1 professional · unlimited clients',
           'Full calendar with drag & drop',
           'Complete client profile with history and notes',
-          'Financial dashboard with income, expenses and net profit',
-          'Confirmation notifications and semi-automatic reminders',
+          'Monthly revenue and pending payments',
+          'Reminder and confirmation messages ready to send',
           'Installable app on phone and computer',
         ],
       },
       {
         subtitle: 'Auxio Team - Coming soon',
-       
         featured: false,
         cta: false,
         features: [
@@ -131,7 +130,11 @@ export default function Pricing() {
             <FadeSection key={i} delay={i * 0.1 + 0.2} className={plan.featured ? s.featuredWrapper : ''}>
               <div className={`${s.card} ${plan.featured ? s.cardFeatured : ''}`}>
                 <div className={s.plan}>{plan.subtitle}</div>
-                <div className={s.price}><sup>€</sup>{plan.price}</div>                
+                {plan.price ? (
+                  <div className={s.price}><sup>€</sup>{plan.price}</div>
+                ) : (
+                  <div className={s.period}>{t.priceTBA}</div>
+                )}
                 <ul className={s.features}>
                   {plan.features.map((f, j) => (
                     <li key={j}><span className={s.check}>✓</span>{f}</li>

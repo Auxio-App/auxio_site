@@ -37,7 +37,7 @@ const copy = {
         items: [
             'Visualiza a agenda por dia, semana ou mês.',
             'Reagenda consultas em segundos com arrastar e largar.',
-            'Envia confirmações e lembretes semi-automáticos.',
+            'Mensagens de lembrete e confirmação prontas a enviar.',
             'Controla automaticamente os pacotes de sessões.',
         ],
         views: ['Dia', 'Semana', 'Mês'],
