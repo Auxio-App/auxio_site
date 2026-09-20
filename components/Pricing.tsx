@@ -1,17 +1,16 @@
 'use client';
 
 import FadeSection from './FadeSection';
+import Link from 'next/link';
 import { useLang } from '@/lib/i18n';
 import s from './Pricing.module.css';
-
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor';
 
 const copy = {
   pt: {
     label: 'Preços',
     title: 'Tudo o que precisas para gerir o teu negócio',
     desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 7 dias, sem contratos longos, custos escondidos ou compromissos.',
-    cta: 'Subscrever',
+    cta: 'Agendar demo',
     priceTBA: 'Preço a anunciar',
     plans: [
       {
@@ -64,7 +63,7 @@ const copy = {
     label: 'Pricing',
     title: 'Everything you need to run your business',
     desc: 'Start with the essentials and move up when you need to. Try Auxio free for 7 days, with no long contracts, hidden costs or commitments.',
-    cta: 'Subscribe',
+    cta: 'Book a demo',
     priceTBA: 'Price to be announced',
     plans: [
       {
@@ -140,7 +139,7 @@ export default function Pricing() {
                     <li key={j}><span className={s.check}>✓</span>{f}</li>
                   ))}
                 </ul>
-                {plan.cta && <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${plan.featured ? s.btnFeatured : ''}`}>{t.cta}</a>}
+                {plan.cta && <Link href="/demo" className={`${s.btn} ${plan.featured ? s.btnFeatured : ''}`}>{t.cta}</Link>}
               </div>
             </FadeSection>
           ))}

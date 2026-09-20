@@ -1,10 +1,9 @@
 'use client';
 
 import FadeSection from './FadeSection';
+import Link from 'next/link';
 import { useLang } from '@/lib/i18n';
 import s from './FinalCTA.module.css';
-
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor';
 
 const copy = {
   pt: {
@@ -33,7 +32,7 @@ export default function FinalCTA() {
             <h2 className={s.title}>{t.title}</h2>
             <p className={s.desc}>{t.desc}</p>
             <div className={s.actions}>
-              <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
+              <Link href="/demo" className={s.btnPrimary}>
                 <svg viewBox="0 0 16 16" width="15" height="15" fill="none"
                      stroke="currentColor" strokeWidth="1.4"
                      strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +40,7 @@ export default function FinalCTA() {
                   <path d="M6.4 9.6L3.6 9l.8-2 2 .6M6.4 9.6l.6 2 2-.8-.6-2M4.4 11.6l-2 2" />
                 </svg>
                 {t.ctaPrimary}
-              </a>
+              </Link>
               <a href="#agenda" className={s.btnGhost}>
                 <svg viewBox="0 0 16 16" width="15" height="15" fill="none"
                      stroke="currentColor" strokeWidth="1.4"

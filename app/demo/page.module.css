@@ -1,0 +1,38 @@
+.page {
+  min-height: 100vh;
+  padding: 100px clamp(24px, 7vw, 116px) 64px;
+  background: radial-gradient(circle at 15% 12%, rgba(111, 139, 87, .14), transparent 25%), var(--bege);
+}
+
+.content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, 620px); gap: clamp(52px, 10vw, 180px); align-items: center; max-width: 1440px; min-height: calc(100vh - 164px); margin: 0 auto; }
+.intro { max-width: 590px; transform: translateY(-56px); }
+.intro h1 { max-width: 620px; margin: 0 0 24px; font-size: clamp(48px, 5.4vw, 82px); line-height: .98; letter-spacing: -4px; color: var(--castanho); }
+.intro h1 em { color: var(--argila); font-style: normal; }
+.intro > p { max-width: 520px; color: #6c625b; font-size: 20px; line-height: 1.55; }
+.benefits { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; padding: 0; list-style: none; }
+.benefits li { padding: 10px 14px; border: 1px solid rgba(30,20,14,.14); border-radius: 999px; color: #5d544d; font-size: 14px; }
+.benefits li::before { content: '✓'; margin-right: 8px; color: var(--argila-dark); font-weight: 800; }
+.card { padding: clamp(28px, 4vw, 52px); border: 1px solid rgba(30,20,14,.08); border-radius: 28px; background: rgba(255,255,255,.86); box-shadow: var(--shadow-xl); }
+.card h2 { font-size: clamp(28px, 3vw, 38px); letter-spacing: -1.5px; }
+.cardIntro { margin: 12px 0 30px; color: #71665d; font-size: 17px; line-height: 1.5; }
+.form { display: grid; gap: 19px; }
+.formRow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.form label { display: grid; gap: 8px; color: var(--castanho); font-size: 14px; font-weight: 800; }
+.form label span { color: var(--argila-dark); }
+.form input, .form select, .form textarea { width: 100%; min-height: 54px; padding: 0 15px; border: 1px solid #ded8d3; border-radius: 12px; outline: none; background: #fcfbfa; color: var(--castanho); font: inherit; font-weight: 400; transition: border-color .2s, box-shadow .2s; }
+.form textarea { min-height: 104px; padding: 13px 15px; resize: vertical; }
+.form small { color: #847a72; font-size: 12px; font-weight: 500; }
+.form select { appearance: auto; }
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--argila); box-shadow: 0 0 0 4px rgba(111,139,87,.15); }
+.form button, .back { display: flex; justify-content: center; align-items: center; gap: 11px; min-height: 55px; margin-top: 6px; border: 0; border-radius: 12px; background: var(--argila-dark); color: white; cursor: pointer; font: inherit; font-weight: 800; text-decoration: none; transition: transform .2s, background .2s; }
+.form button:hover:not(:disabled), .back:hover { transform: translateY(-2px); background: #3f572f; }
+.form button:disabled { cursor: wait; opacity: .7; }
+.note { margin-top: 17px; color: #847a72; font-size: 12px; line-height: 1.45; text-align: center; }
+.success { min-height: 370px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.successIcon { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 22px; border-radius: 50%; background: #e8f0e2; color: var(--argila-dark); font-size: 27px; font-weight: 800; }
+.success p { max-width: 350px; margin: 12px 0 28px; color: #71665d; line-height: 1.55; }
+.back { width: 100%; max-width: 260px; }
+
+@media (max-width: 900px) { .page { padding: 100px 22px 48px; } .content { grid-template-columns: 1fr; gap: 46px; padding-top: 24px; } .intro { transform: none; } .intro h1 { letter-spacing: -2.5px; } .card { max-width: 600px; width: 100%; } }
+@media (max-width: 540px) { .formRow { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .content { padding-top: 42px; } .intro > p { font-size: 18px; } .card { padding: 27px 22px; border-radius: 20px; } }

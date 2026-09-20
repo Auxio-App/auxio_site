@@ -1,9 +1,8 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { useLang } from '@/lib/i18n';
 import s from './Hero.module.css';
-
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor';
 
 const copy = {
   pt: {
@@ -11,7 +10,7 @@ const copy = {
     h1b: 'de gerir o teu ',
     h1mark: 'negócio',
     sub: 'Enquanto estás focado em atender clientes, o Auxio mantém o resto do negócio a funcionar. Agenda, confirmações automáticas, histórico de cada cliente, pagamentos e comunicação ficam reunidos num único painel, para que deixes de perder tempo entre o WhatsApp, folhas de cálculo e aplicações diferentes.',
-    ctaPrimary: 'Quero acesso antecipado',
+    ctaPrimary: 'Agendar demo',
     ctaGhost: 'Ver como funciona',
 
     mockDay: 'Quarta-feira, 5 de agosto',
@@ -58,7 +57,7 @@ const copy = {
     h1b: 'to run your ',
     h1mark: 'business',
     sub: 'While you stay focused on seeing clients, Auxio keeps the rest of the business running. Calendar, automatic confirmations, every client’s history, payments and messaging all come together in a single dashboard, so you stop losing time between WhatsApp, spreadsheets and different apps.',
-    ctaPrimary: 'Get early access',
+    ctaPrimary: 'Book a demo',
     ctaGhost: 'See how it works',
 
     mockDay: 'Wednesday, 5 August',
@@ -136,10 +135,10 @@ export default function Hero() {
             {t.sub}
           </p>
           <div className={`${s.actions} fade-up`} style={{ transitionDelay: '0.24s' }}>
-            <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
+            <Link href="/demo" className={s.btnPrimary}>
               {t.ctaPrimary}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </Link>
             <a href="#agenda" className={s.btnGhost}>{t.ctaGhost}</a>
           </div>
 

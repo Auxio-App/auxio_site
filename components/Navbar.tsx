@@ -3,10 +3,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useLang, type Lang } from '@/lib/i18n';
 import s from './Navbar.module.css';
-
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor';
 
 const copy = {
   pt: {
@@ -15,7 +14,7 @@ const copy = {
       { href: '#como-funciona', label: 'Como funciona' },
       { href: '#precos', label: 'Preços' },
     ],
-    cta: 'Subscrever',
+    cta: 'Agendar demo',
     openMenu: 'Abrir menu',
     closeMenu: 'Fechar menu',
   },
@@ -25,7 +24,7 @@ const copy = {
       { href: '#como-funciona', label: 'How it works' },
       { href: '#precos', label: 'Pricing' },
     ],
-    cta: 'Subscribe',
+    cta: 'Book a demo',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
   },
@@ -53,7 +52,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { lang } = useLang();
+  const pathname = usePathname();
   const t = copy[lang];
+  const homeHref = (href: string) => pathname === '/' ? href : `/${href}`;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -70,11 +71,11 @@ export default function Navbar() {
 
       <ul className={s.links}>
         {t.links.map((l) => (
-          <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+          <li key={l.href}><Link href={homeHref(l.href)}>{l.label}</Link></li>
         ))}
         <li><LangToggle /></li>
         <li>
-          <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className={s.cta}>{t.cta}</a>
+          <Link href="/demo" className={s.cta}>{t.cta}</Link>
         </li>
       </ul>
 
@@ -91,18 +92,16 @@ export default function Navbar() {
 
       <div className={`${s.mobileMenu} ${open ? s.mobileMenuOpen : ''}`}>
         {t.links.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
+          <Link key={l.href} href={homeHref(l.href)} onClick={() => setOpen(false)}>{l.label}</Link>
         ))}
         <LangToggle className={s.langToggleMobile} />
-        <a
-          href={FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/demo"
           className={s.mobileCta}
           onClick={() => setOpen(false)}
         >
           {t.cta}
-        </a>
+        </Link>
       </div>
     </nav>
   );

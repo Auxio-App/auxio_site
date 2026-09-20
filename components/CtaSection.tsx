@@ -1,23 +1,22 @@
 'use client';
 
 import FadeSection from './FadeSection';
+import Link from 'next/link';
 import { useLang } from '@/lib/i18n';
 import s from './CtaSection.module.css';
 
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/viewform?usp=publish-editor';
-
 const copy = {
   pt: {
-    title: <>Sê dos primeiros a usar.<br /><em>Garante um desconto nos primeiros 3 meses.</em></>,
-    desc: 'Subscreve já e recebe acesso antecipado antes do lançamento oficial. Os primeiros 15 profissionais têm desconto nos primeiros 3 meses da mensalidade.',
-    btn: 'Subscrever →',
-    sub: 'Sem spam. Só avisamos quando estiver pronto.',
+    title: <>Vê o Auxio aplicado<br /><em>ao teu dia a dia.</em></>,
+    desc: 'Numa demonstração breve, mostramos-te como organizar clientes, marcações e pagamentos num único lugar.',
+    btn: 'Agendar demo →',
+    sub: 'Sem compromisso. Falamos contigo para encontrar o melhor horário.',
   },
   en: {
-    title: <>Be among the first to use it.<br /><em>Lock in a discount for the first 3 months.</em></>,
-    desc: 'Subscribe now and get early access before the official launch. The first 15 professionals get a discount on the first 3 months of their subscription.',
-    btn: 'Subscribe →',
-    sub: 'No spam. We only reach out when it’s ready.',
+    title: <>See Auxio applied<br /><em>to your daily work.</em></>,
+    desc: 'In a short demo, we show you how to organise clients, bookings and payments in one place.',
+    btn: 'Book a demo →',
+    sub: 'No commitment. We will contact you to find the best time.',
   },
 };
 
@@ -38,14 +37,9 @@ export default function CtaSection() {
           <p className={s.desc}>{t.desc}</p>
         </FadeSection>
         <FadeSection delay={0.3}>
-          <a
-            href={FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={s.btn}
-          >
+          <Link href="/demo" className={s.btn}>
             {t.btn}
-          </a>
+          </Link>
           <p className={s.sub}>{t.sub}</p>
         </FadeSection>
       </div>
