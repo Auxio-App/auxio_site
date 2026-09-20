@@ -3,13 +3,39 @@
 import Link from 'next/link';
 import { FormEvent, useState } from 'react';
 import Navbar from '@/components/Navbar';
+import { useLang } from '@/lib/i18n';
 import s from './page.module.css';
 
 const formEndpoint = 'https://docs.google.com/forms/d/e/1FAIpQLSeCQNvgasJSJtWFz54YjiOV_RH_8MKhdnkwBE66JmBjGsfpaw/formResponse';
 
+const copy = {
+  pt: {
+    titleA: 'Vamos mostrar-te', titleB: 'o Auxio no ', titleEm: 'teu dia a dia.',
+    intro: 'Vê como podes reunir agenda, clientes, pagamentos e as mensagens que precisas de enviar num único lugar.',
+    benefits: ['Sem compromisso', 'Adaptada à tua profissão', 'Espaço para todas as tuas perguntas'],
+    cardTitle: 'Agenda a tua demo', cardIntro: 'Deixa-nos os teus dados e falamos contigo para encontrar um horário.',
+    name: 'Nome', profession: 'Profissão', choose: 'Seleciona', email: 'Email', message: 'Mensagem', optional: '(opcional)', placeholder: 'Tens alguma dúvida específica?',
+    submit: 'Pedir demonstração', sending: 'A enviar…', note: 'Usamos estes dados apenas para te contactar sobre a demonstração.',
+    successTitle: 'Pedido recebido.', successText: 'Obrigado! Entramos em contacto contigo em breve para combinar a demonstração.', back: 'Voltar ao Auxio',
+    professions: [['Fisioterapeuta', 'Fisioterapeuta'], ['Psicólogo', 'Psicólogo/a'], ['Nutricionista', 'Nutricionista'], ['Esteticista', 'Esteticista'], ['Personal Trainer', 'Personal Trainer'], ['Outra', 'Outra']],
+  },
+  en: {
+    titleA: 'Let us show you', titleB: 'Auxio in ', titleEm: 'your daily work.',
+    intro: 'See how you can bring your calendar, clients, payments and the messages you need to send together in one place.',
+    benefits: ['No commitment', 'Tailored to your profession', 'Time for all your questions'],
+    cardTitle: 'Book your demo', cardIntro: 'Leave us your details and we will contact you to find a suitable time.',
+    name: 'Name', profession: 'Profession', choose: 'Select', email: 'Email', message: 'Message', optional: '(optional)', placeholder: 'Is there anything specific you would like to see?',
+    submit: 'Request a demo', sending: 'Sending…', note: 'We only use these details to contact you about the demo.',
+    successTitle: 'Request received.', successText: 'Thank you! We will contact you shortly to arrange your demo.', back: 'Back to Auxio',
+    professions: [['Fisioterapeuta', 'Physiotherapist'], ['Psicólogo', 'Psychologist'], ['Nutricionista', 'Nutritionist'], ['Esteticista', 'Esthetician'], ['Personal Trainer', 'Personal Trainer'], ['Outra', 'Other']],
+  },
+};
+
 export default function DemoPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const { lang } = useLang();
+  const t = copy[lang];
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -37,12 +63,10 @@ export default function DemoPage() {
       <main className={s.page}>
       <section className={s.content}>
         <div className={s.intro}>
-          <h1>Vamos mostrar-te<br />o Auxio no <em>teu dia a dia.</em></h1>
-          <p>Vê como podes reunir agenda, clientes, pagamentos e as mensagens que precisas de enviar num único lugar.</p>
+          <h1>{t.titleA}<br />{t.titleB}<em>{t.titleEm}</em></h1>
+          <p>{t.intro}</p>
           <ul className={s.benefits}>
-            <li>Sem compromisso</li>
-            <li>Adaptada à tua profissão</li>
-            <li>Espaço para todas as tuas perguntas</li>
+            {t.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
           </ul>
         </div>
 
@@ -50,47 +74,42 @@ export default function DemoPage() {
           {submitted ? (
             <div className={s.success} role="status">
               <span className={s.successIcon}>✓</span>
-              <h2>Pedido recebido.</h2>
-              <p>Obrigado! Entramos em contacto contigo em breve para combinar a demonstração.</p>
-              <Link href="/" className={s.back}>Voltar ao Auxio</Link>
+              <h2>{t.successTitle}</h2>
+              <p>{t.successText}</p>
+              <Link href="/" className={s.back}>{t.back}</Link>
             </div>
           ) : (
             <>
-              <h2>Agenda a tua demo</h2>
-              <p className={s.cardIntro}>Deixa-nos os teus dados e falamos contigo para encontrar um horário.</p>
+              <h2>{t.cardTitle}</h2>
+              <p className={s.cardIntro}>{t.cardIntro}</p>
               <form className={s.form} onSubmit={handleSubmit}>
                 <div className={s.formRow}>
                   <label>
-                    Nome *
+                    {t.name} *
                     <input name="name" autoComplete="name" required />
                   </label>
                   <label>
-                    Profissão *
+                    {t.profession} *
                     <select name="profession" defaultValue="" required>
-                      <option value="" disabled>Seleciona</option>
-                      <option>Fisioterapeuta</option>
-                      <option>Psicólogo/a</option>
-                      <option>Nutricionista</option>
-                      <option>Esteticista</option>
-                      <option>Personal Trainer</option>
-                      <option>Outra</option>
+                      <option value="" disabled>{t.choose}</option>
+                      {t.professions.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
                     </select>
                   </label>
                 </div>
                 <label>
-                  Email *
+                  {t.email} *
                   <input name="email" type="email" autoComplete="email" required />
                 </label>
                 <label>
-                  Mensagem (opcional)
-                  <textarea name="message" rows={4} placeholder="Tens alguma dúvida específica?" />
+                  {t.message} {t.optional}
+                  <textarea name="message" rows={4} placeholder={t.placeholder} />
                 </label>
                 <button type="submit" disabled={submitting}>
-                  {submitting ? 'A enviar…' : 'Pedir demonstração'}
+                  {submitting ? t.sending : t.submit}
                   <span aria-hidden="true">→</span>
                 </button>
               </form>
-              <p className={s.note}>Usamos estes dados apenas para te contactar sobre a demonstração.</p>
+              <p className={s.note}>{t.note}</p>
             </>
           )}
         </div>
