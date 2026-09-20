@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://auxio.pt'),
   applicationName: 'Auxio',
   title: 'Auxio - Agenda e gestão de clientes para profissionais',
-  description: 'Software de marcações para fisioterapeutas, psicólogos, esteticistas e outros profissionais. Agenda, lembretes automáticos, ficha de cliente e pagamentos num só painel. 7 dias grátis.',
+  description: 'Software de marcações para fisioterapeutas, psicólogos, esteticistas e outros profissionais. Agenda, lembretes automáticos, ficha de cliente e pagamentos num só painel. 15 dias grátis.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Auxio - Agenda e gestão de clientes para profissionais',

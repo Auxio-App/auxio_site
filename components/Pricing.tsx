@@ -9,7 +9,7 @@ const copy = {
   pt: {
     label: 'Preços',
     title: 'Tudo o que precisas para gerir o teu negócio',
-    desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 7 dias, sem contratos longos, custos escondidos ou compromissos.',
+    desc: 'Começa com o essencial e evolui quando precisares. Experimenta o Auxio gratuitamente durante 15 dias, sem contratos longos, custos escondidos ou compromissos.',
     cta: 'Agendar demo',
     priceTBA: 'Preço a anunciar',
     plans: [
@@ -62,7 +62,7 @@ const copy = {
   en: {
     label: 'Pricing',
     title: 'Everything you need to run your business',
-    desc: 'Start with the essentials and move up when you need to. Try Auxio free for 7 days, with no long contracts, hidden costs or commitments.',
+    desc: 'Start with the essentials and move up when you need to. Try Auxio free for 15 days, with no long contracts, hidden costs or commitments.',
     cta: 'Book a demo',
     priceTBA: 'Price to be announced',
     plans: [
