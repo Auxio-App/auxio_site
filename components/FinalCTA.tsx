@@ -10,13 +10,11 @@ const copy = {
     title: 'Começa a recuperar o teu tempo',
     desc: 'Deixa para trás a agenda desorganizada, as mensagens perdidas e o controlo manual do negócio. Cria a tua conta, configura os teus serviços e começa a gerir tudo num único lugar.',
     ctaPrimary: 'Marcar demonstração',
-    ctaGhost: 'Ver as funcionalidades',
   },
   en: {
     title: 'Start getting your time back',
     desc: 'Leave behind the disorganised calendar, the lost messages and running the business by hand. Create your account, set up your services and start managing everything in one place.',
     ctaPrimary: 'Book a demo',
-    ctaGhost: 'See the features',
   },
 };
 
@@ -41,15 +39,6 @@ export default function FinalCTA() {
                 </svg>
                 {t.ctaPrimary}
               </Link>
-              <a href="#agenda" className={s.btnGhost}>
-                <svg viewBox="0 0 16 16" width="15" height="15" fill="none"
-                     stroke="currentColor" strokeWidth="1.4"
-                     strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="1.8" y="3" width="12.4" height="11.2" rx="2" />
-                  <path d="M4.8 1.5v3M11.2 1.5v3M1.8 7h12.4" />
-                </svg>
-                {t.ctaGhost}
-              </a>
             </div>
           </div>
         </FadeSection>

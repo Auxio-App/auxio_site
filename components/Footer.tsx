@@ -22,8 +22,9 @@ export default function Footer() {
   return (
     <footer className={s.footer}>
       <div className={s.logo}>
-        <Image src="/logo.png" alt="Auxio" width={30} height={30} />
-        Auxio
+        
+        <Image src="/logo-footer.png" alt="Auxio" width={93} height={40} />
+        
       </div>
       <div className={s.text}>{t.tagline}</div>
       <div className={s.text}>{t.rights}</div>
