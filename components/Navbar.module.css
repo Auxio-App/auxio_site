@@ -47,6 +47,63 @@
 .links a:hover {
   color: var(--castanho);
 }
+.featuresItem { position: relative; }
+.featuresButton, .mobileFeaturesButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: none;
+  color: var(--castanho-medio);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+.featuresButton:hover { color: var(--castanho); }
+.featuresChevron {
+  width: 11px;
+  height: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.featuresMenu {
+  position: absolute;
+  top: calc(100% + 20px);
+  right: -16px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  width: 620px;
+  padding: 10px;
+  border: 1px solid rgba(30,20,14,0.08);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 18px 40px rgba(30,20,14,0.14);
+}
+.featuresMenu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 12px;
+  border-radius: 8px;
+}
+.featuresMenu a:hover { background: rgba(194,106,76,0.09); }
+.featureIcon {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  color: var(--argila);
+}
+.featuresMenu a > span { display: grid; gap: 4px; }
+.featuresMenu strong { color: var(--castanho); font-size: 15px; line-height: 1.15; }
+.featuresMenu small { color: var(--castanho-medio); font-size: 12px; line-height: 1.25; }
 .cta {
   background: var(--castanho) !important;
   color: var(--white) !important;
@@ -144,6 +201,20 @@
   border-bottom: 1px solid rgba(30,20,14,0.06);
 }
 .mobileMenu a:last-of-type { border-bottom: none; }
+.mobileFeaturesButton {
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 4px;
+  border-bottom: 1px solid rgba(30,20,14,0.06);
+  color: var(--castanho);
+  font-size: 16px;
+}
+.mobileFeatures {
+  display: flex;
+  flex-direction: column;
+  margin: -4px 0 4px 12px;
+}
+.mobileFeatures a { font-size: 14px; padding: 9px 4px; }
 .mobileCta {
   margin-top: 8px;
   background: var(--argila);
